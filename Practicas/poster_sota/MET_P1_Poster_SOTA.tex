@@ -1,0 +1,214 @@
+\documentclass[10pt]{article}
+
+\usepackage[a3paper,landscape,margin=11mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{ragged2e}
+\usepackage{hyperref}
+
+\definecolor{burdeos}{HTML}{922B38}
+\definecolor{burdeososcuro}{HTML}{651C27}
+\definecolor{tinta}{HTML}{20262E}
+\definecolor{gris}{HTML}{5E6875}
+\definecolor{papel}{HTML}{F7F5F2}
+\definecolor{linea}{HTML}{D7CFCA}
+\definecolor{verde}{HTML}{176B5B}
+\definecolor{azul}{HTML}{315B7D}
+
+\pagecolor{white}
+\color{tinta}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\setlist[itemize]{leftmargin=5mm,itemsep=1pt,topsep=1pt}
+\renewcommand{\familydefault}{\sfdefault}
+\hypersetup{colorlinks=true,urlcolor=azul,linkcolor=burdeos}
+
+\newcommand{\postersection}[1]{%
+  \vspace{1.2mm}%
+  {\color{burdeos}\fontsize{14.5}{16}\selectfont\bfseries #1}\par
+  \vspace{0.5mm}{\color{burdeos}\rule{\linewidth}{1pt}}\vspace{0.7mm}
+}
+
+\newcommand{\callout}[2]{%
+  \fcolorbox{#1}{#1!6}{%
+    \begin{minipage}{0.94\linewidth}
+      \vspace{0.9mm}\small #2\vspace{0.9mm}
+    \end{minipage}}
+}
+
+\newcommand{\methodbox}[2]{%
+  \fcolorbox{linea}{papel}{%
+    \begin{minipage}[t]{0.94\linewidth}
+      \vspace{0.7mm}{\color{burdeososcuro}\bfseries #1}\par
+      \small #2\vspace{0.7mm}
+    \end{minipage}}
+}
+
+\begin{document}
+\thispagestyle{empty}
+\noindent\begin{minipage}[t][\textheight][t]{\textwidth}
+
+% Header
+\begin{minipage}[c]{0.69\textwidth}
+  {\color{burdeososcuro}\fontsize{25}{28}\selectfont\bfseries
+  Optimizaci\'on exacta, metaheur\'istica y asistida por aprendizaje\par}
+  \vspace{1.5mm}
+  {\fontsize{16}{19}\selectfont\bfseries
+  Un estudio reproducible de \textit{Curriculum-Based Course Timetabling} con CP-SAT y Simulated Annealing}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.27\textwidth}
+  \raggedleft
+  {\color{gris}\fontsize{10.5}{12.5}\selectfont
+  Metodolog\'ia y T\'ecnicas de Investigaci\'on\par
+  M\'aster en Aprendizaje Autom\'atico y Datos Masivos\par
+  Universidad Polit\'ecnica de Madrid\par}
+  \vspace{2mm}
+  {\color{burdeos}\bfseries Propuesta de investigaci\'on | 2026--2027}
+\end{minipage}
+
+\vspace{2mm}
+{\color{burdeos}\rule{\textwidth}{2.4pt}}
+\vspace{2mm}
+
+% Three-column body
+\begin{minipage}[t]{0.316\textwidth}
+\postersection{Problema y motivaci\'on}
+\justifying
+Construir un horario universitario exige asignar clases a periodos y aulas sin conflictos, respetando disponibilidad docente y capacidad. Una vez garantizada la factibilidad, la calidad depende de objetivos que compiten entre s\'i: dispersi\'on semanal, compacidad curricular, estabilidad de aula y capacidad.
+
+El problema es NP-hard y constituye un banco de pruebas relevante para estudiar c\'omo se complementan la programaci\'on por restricciones, la b\'usqueda estoc\'astica y las t\'ecnicas de selecci\'on o configuraci\'on aprendida.
+
+\vspace{1mm}
+\callout{burdeos}{\textbf{Alcance preciso.} El experimento aborda CB-CTT, formulaci\'on UD2 de ITC-2007. No pretende representar todas las variantes del timetabling universitario. ITC-2019 se analizar\'a como referencia de mayor realismo y como l\'imite de validez externa.}
+
+\postersection{Estado del arte en 2026}
+\renewcommand{\arraystretch}{1.28}
+\small
+\begin{tabularx}{\linewidth}{>{\bfseries\color{burdeos}}p{15mm} X}
+2007 & ITC-2007 fija 21 instancias reales y una funci\'on objetivo reproducible para CB-CTT.\\
+2021 & El aprendizaje se usa para seleccionar algoritmos a partir de caracter\'isticas de instancia; requiere muchos m\'as datos que las 21 instancias oficiales.\\
+2022--23 & Las revisiones de referencia sit\'uan los mejores resultados en m\'etodos exactos, b\'usqueda local avanzada, ALNS y matheur\'isticas.\\
+2025 & La revisi\'on IP--ML confirma que ML act\'ua sobre todo en selecci\'on, ajuste, predicci\'on y reducci\'on del espacio de b\'usqueda.\\
+2026 & Un SA con vecindario \textit{LectureKick} alcanza resultados competitivos con el SOTA; otro trabajo combina inicializaci\'on CP-SAT con VND y cadenas de Kempe.\\
+\end{tabularx}
+
+\vspace{2mm}
+\callout{verde}{\textbf{Lectura del SOTA.} La frontera actual no es ``exactos contra heur\'isticas'', sino la combinaci\'on de construcci\'on, cotas, descomposici\'on y b\'usqueda local. La comparaci\'on propuesta se interpreta como un estudio controlado de dos baselines complementarios.}
+
+\postersection{Conexi\'on con el m\'aster}
+\begin{itemize}
+  \item IA para b\'usqueda y optimizaci\'on combinatoria.
+  \item Dise\~no experimental reproducible y an\'alisis estad\'istico.
+  \item Papel realista de ML: selecci\'on de algoritmos y configuraci\'on, no aprendizaje forzado con una muestra insuficiente.
+\end{itemize}
+
+\postersection{Referencias clave}
+{\fontsize{8.2}{9.5}\selectfont
+[1] Di Gaspero, McCollum y Schaerf. ITC-2007: Curriculum-Based Course Timetabling, 2007.\par
+[2] De la Rosa-Rivera et al. Algorithm selection for educational timetabling. \textit{ESWA}, 2021. DOI: 10.1016/j.eswa.2021.114694.\par
+[3] Ceschia, Di Gaspero y Schaerf. Educational timetabling: benchmarks and SOTA. \textit{EJOR}, 2023. DOI: 10.1016/j.ejor.2022.07.011.\par
+[4] Abdipoor et al. Meta-heuristic approaches for UCTP. \textit{ISWA}, 2023. DOI: 10.1016/j.iswa.2023.200253.\par
+[5] Gu et al. From integer programming to machine learning. \textit{Computation}, 2025. DOI: 10.3390/computation13010010.\par
+[6] Ceschia et al. Revisiting local search for CB-CTT. \textit{COR}, 2026. DOI: 10.1016/j.cor.2026.107621.\par
+[7] Nguyen. Adaptive penalty-guided VND with CP-SAT for CB-CTT. ICAART, 2026. DOI: 10.5220/0014437700004052.}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.316\textwidth}
+\postersection{Preguntas de investigaci\'on}
+\begin{enumerate}[leftmargin=7mm,itemsep=2pt]
+  \item \textbf{RQ1.} \textquestiondown Qu\'e familias de m\'etodos dominan CB-CTT y qu\'e papel desempe\~nan hoy los componentes exactos y asistidos por aprendizaje?
+  \item \textbf{RQ2.} Bajo el mismo presupuesto computacional, \textquestiondown c\'omo difieren CP-SAT y SA en factibilidad, calidad, estabilidad y comportamiento \textit{anytime}?
+  \item \textbf{RQ3.} \textquestiondown Qu\'e caracter\'isticas de las instancias parecen favorecer a cada enfoque?
+\end{enumerate}
+
+\postersection{Dise\~no del estudio}
+\methodbox{1. Revisi\'on estructurada}{B\'usqueda 2015--2026 en Scopus, Web of Science e IEEE Xplore, seguida de \textit{snowballing}. Extracci\'on de variante, datos, algoritmo, presupuesto, m\'etricas, estad\'istica, c\'odigo y disponibilidad de resultados.}
+
+\vspace{2mm}
+\methodbox{2. Infraestructura com\'un}{Un \`unico parser, validador, funci\'on de coste y formato de salida para evitar diferencias de implementaci\'on. Pruebas unitarias para las cuatro restricciones duras y las cuatro penalizaciones oficiales.}
+
+\vspace{2mm}
+\methodbox{3. Baselines experimentales}{\textbf{Greedy}: referencia constructiva. \textbf{CP-SAT}: modelo completo, objetivo oficial y cota inferior. \textbf{SA}: soluci\'on factible, movimientos y swaps, reparaci\'on documentada y evaluaci\'on incremental.}
+
+\vspace{2mm}
+\methodbox{4. Evaluaci\'on reproducible}{Configuraciones congeladas antes del test. Semillas, trazas, tiempos, versiones y resultados crudos conservados en el repositorio. El coste de construcci\'on se incluye en el presupuesto.}
+
+\postersection{Protocolo experimental}
+\small
+\begin{tabularx}{\linewidth}{>{\bfseries}p{32mm} X}
+Datos & 21 instancias ITC-2007 Track 3, con validador oficial reproducido.\\
+Ajuste & Instancias artificiales o conjunto reservado; nunca las mismas observaciones usadas para la comparaci\'on final.\\
+Recursos & Igual hardware, un n\'ucleo por m\'etodo, memoria y presupuesto temporal declarados.\\
+R\'eplicas & Al menos 10 semillas por instancia para los m\'etodos estoc\'asticos.\\
+Control & Greedy se ejecuta una vez si es determinista; CP-SAT registra cota, incumbent y gap.\\
+\end{tabularx}
+
+\vspace{2mm}
+\callout{azul}{\textbf{Regla de honestidad.} Los resultados se comparar\'an con los mejores valores conocidos vigentes y con implementaciones publicadas, pero no se afirmar\'a haber alcanzado el SOTA sin reproducir sus presupuestos y condiciones.}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.316\textwidth}
+\postersection{Variables y an\'alisis}
+\textbf{Resultados primarios}
+\begin{itemize}
+  \item Tasa de factibilidad y tiempo hasta la primera soluci\'on factible.
+  \item Penalizaci\'on oficial y gap frente al mejor valor conocido.
+  \item Mediana, rango intercuart\'il y estabilidad entre semillas.
+  \item Curva calidad--tiempo y \textit{primal integral}.
+  \item Cota y gap de optimalidad de CP-SAT cuando est\'en disponibles.
+\end{itemize}
+
+\textbf{Inferencia}
+\begin{itemize}
+  \item La instancia, no cada ejecuci\'on, ser\'a la unidad estad\'istica.
+  \item Friedman para tres m\'etodos; comparaciones pareadas de Wilcoxon con correcci\'on de Holm.
+  \item Tama\~no del efecto mediante correlaci\'on biserial de rangos e intervalos bootstrap.
+  \item Resultados completos por instancia, incluidos fallos y \textit{timeouts}.
+\end{itemize}
+
+\postersection{Contribuci\'on esperada}
+\begin{itemize}
+  \item Taxonom\'ia actualizada de exactos, metaheur\'isticas, h\'ibridos y m\'etodos asistidos por aprendizaje.
+  \item Benchmark reproducible que separa factibilidad, calidad, estabilidad y evidencia de optimalidad.
+  \item Evidencia sobre cu\'ando CP-SAT y SA resultan complementarios.
+  \item C\'odigo, configuraciones, semillas y datos derivados reutilizables.
+\end{itemize}
+
+\callout{burdeos}{\textbf{No se promete} un nuevo algoritmo de SOTA ni un modelo de ML entrenado con 21 instancias. La aportaci\'on es metodol\'ogica: comparaci\'on justa, trazable y cr\'itica.}
+
+\postersection{Factibilidad para tres personas}
+\small
+\begin{tabularx}{\linewidth}{>{\bfseries\color{burdeos}}p{23mm} X}
+Perfil A & Protocolo bibliogr\'afico, cribado y s\'intesis del SOTA.\\
+Perfil B & Parser, validador, scorer, baseline greedy y CP-SAT.\\
+Perfil C & SA, automatizaci\'on de experimentos y trazas \textit{anytime}.\\
+Equipo & Dise\~no estad\'istico, interpretaci\'on, art\'iculo y p\'oster.\\
+\end{tabularx}
+
+\vspace{2mm}
+\textbf{Plan de cuatro semanas:} congelar protocolo y datos; implementar y probar; ejecutar y analizar; redactar, revisar y preparar el p\'oster. La principal medida de control es evitar ampliar el problema a ITC-2019 durante esta entrega.
+
+\postersection{Amenazas a la validez}
+\begin{itemize}
+  \item Solo 21 instancias y una universidad de origen.
+  \item Dependencia del hardware, lenguaje y calidad de implementaci\'on.
+  \item Sesgo por ajuste de par\'ametros o selecci\'on de referencias.
+  \item ITC-2007 simplifica preferencias y asignaci\'on individual de estudiantes.
+\end{itemize}
+
+\end{minipage}
+
+\vfill
+{\color{linea}\rule{\textwidth}{0.8pt}}\vspace{1mm}
+{\color{gris}\small
+Equipo de tres estudiantes \hfill Revisi\'on cerrada a 24 de septiembre de 2026 \hfill Repositorio reproducible y datos abiertos cuando finalice el estudio}
+
+\end{minipage}
+\end{document}

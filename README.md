@@ -1,13 +1,24 @@
-# Optimization and AI for University Course Timetabling
+# Metodología y Técnicas de Investigación
 
-This repository contains the initial research proposal for Practice 1 of *Methodology and Research Techniques* in the Master's Degree in Machine Learning and Big Data.
+Material de la asignatura y trabajo sobre optimización e inteligencia artificial aplicadas al *University Course Timetabling Problem* (UCTP), dentro del Máster en Machine Learning y Big Data.
 
-The proposed study has two parts. First, it will review exact, metaheuristic, matheuristic, hyper-heuristic, and learning-assisted approaches to the University Course Timetabling Problem. It will then implement CP-SAT and Simulated Annealing under a common experimental setup and compare them on the ITC-2007 curriculum-based benchmark. A constructive greedy solver will provide a simple baseline.
+## Estructura
 
-The proposal defines the literature-search protocol, research questions, benchmark, evaluation measures, statistical comparison, and main threats to validity. Machine Learning is examined according to the role it plays in timetabling, including algorithm selection and parameter control, without forcing an unjustified predictive model into a dataset of only 21 benchmark instances.
+- `Documentacion/`: guía y documentos oficiales de la asignatura.
+- `Teoria/`: apuntes, diapositivas y material de consulta.
+- `Practicas/`: enunciados, ejercicios y entregables.
 
-## Current deliverable
+La estructura se mantiene deliberadamente plana para que el material sea fácil de localizar.
 
-- [`proposal/MET_Block_I_Research_Proposal.pdf`](proposal/MET_Block_I_Research_Proposal.pdf): one-page proposal for instructor approval.
+## Trabajo de investigación
+
+The proposed study reviews exact, metaheuristic, matheuristic, and learning-assisted approaches to Curriculum-Based Course Timetabling. It then intends to implement three representative methods: CP-SAT, Simulated Annealing, and a hybrid that uses CP-SAT for construction followed by Variable Neighbourhood Descent for improvement.
+
+The practical study will use the 19 non-redundant instances of the modern ITC-2007 UD2 benchmark. The final evaluation design will be settled after the literature review and initial implementations. Machine Learning is examined through its established roles in algorithm selection, parameter tuning, and adaptive control. The practical component remains centred on established optimization methods.
+
+## Entrega actual
+
+- [`output/pdf/MET_Block_I_Research_Proposal_SOTA.pdf`](output/pdf/MET_Block_I_Research_Proposal_SOTA.pdf): propuesta actualizada de una página para la aprobación del profesor.
+- [`Practicas/MET_Block_I_Research_Proposal.pdf`](Practicas/MET_Block_I_Research_Proposal.pdf): versión original conservada como referencia visual.
 
 The full article, experimental code, results, and poster will be added after the topic has been approved.

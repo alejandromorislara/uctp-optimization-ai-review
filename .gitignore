@@ -1,0 +1,4 @@
+# Local renderings and temporary verification artifacts
+tmp/
+output/rendered/
+

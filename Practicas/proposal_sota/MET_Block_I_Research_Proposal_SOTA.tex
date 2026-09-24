@@ -1,0 +1,115 @@
+\documentclass[10pt]{article}
+
+\usepackage[a4paper,top=13mm,bottom=12mm,left=18mm,right=18mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[table]{xcolor}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{ragged2e}
+\usepackage{eso-pic}
+
+\definecolor{wine}{HTML}{8A2636}
+\definecolor{ink}{HTML}{25282D}
+\definecolor{muted}{HTML}{777A80}
+\definecolor{rulegray}{HTML}{C9C9C9}
+\definecolor{phasefill}{HTML}{F3F3F3}
+
+\color{ink}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2.15pt}
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.12}
+\pagestyle{empty}
+
+\newcommand{\proposalheading}[1]{%
+  \vspace{1.25mm}%
+  {\color{wine}\sffamily\fontsize{9.3}{10.8}\selectfont\bfseries
+  \MakeUppercase{#1}}\par
+  \vspace{0.35mm}%
+}
+
+\newcolumntype{F}{>{\raggedright\arraybackslash\color{wine}\sffamily\bfseries\fontsize{7.45}{8.5}\selectfont}p{23mm}}
+\newcolumntype{A}{>{\raggedright\arraybackslash\fontsize{7.35}{8.45}\selectfont}X}
+\newcolumntype{E}{>{\raggedright\arraybackslash\fontsize{7.35}{8.45}\selectfont}p{36mm}}
+\newcolumntype{R}{>{\raggedright\arraybackslash\sffamily\bfseries\fontsize{7.15}{8.25}\selectfont}p{23mm}}
+
+\begin{document}
+\AddToShipoutPictureBG*{%
+  \AtPageUpperLeft{\raisebox{-\height}{\color{wine}\rule{\paperwidth}{4mm}}}%
+}
+
+\begin{minipage}[t][0.98\textheight][t]{\textwidth}
+\vspace{3.5mm}
+
+\begin{center}
+  {\fontsize{24}{27}\selectfont University Course Timetabling\par}
+  \vspace{2.0mm}
+  {\color{muted}\sffamily\fontsize{8.8}{10.2}\selectfont\bfseries
+  STATE OF THE ART AND REPRESENTATIVE METHODS FOR\par
+  CURRICULUM-BASED COURSE TIMETABLING\par}
+  \vspace{2.0mm}
+  {\color{wine}\rule{36mm}{0.8pt}}
+\end{center}
+
+\proposalheading{Problem and motivation}
+{\fontsize{8.85}{10.3}\selectfont\justifying
+University timetabling assigns every lecture to a period and a room while avoiding clashes involving teachers, rooms, and groups of students. A valid timetable must first satisfy these hard constraints. Its quality also depends on room capacity, the distribution of lectures across the week, curriculum compactness, and room stability. This project focuses on \textbf{Curriculum-Based Course Timetabling (CB-CTT)}, using the public UD2 formulation adopted in Track 3 of ITC-2007. Its common definition and long research history provide a shared basis for comparing different methods.\par}
+
+\proposalheading{Scope of the review}
+{\fontsize{8.65}{10.05}\selectfont\justifying
+The review will examine CB-CTT research published from 2015 to September 2026, together with earlier work needed to explain the benchmark and the main algorithmic families. Searches in Scopus, Web of Science, and IEEE Xplore will be complemented by citation tracing. The analysis will cover exact and constraint-based methods, metaheuristics, matheuristics, and learning-assisted approaches. Papers on other university timetabling variants will be included only when their methods transfer clearly to CB-CTT. For each study, we will consider the formulation, data, solution method, reported evidence, computational setting, and availability of code.\par}
+
+\vspace{0.7mm}
+\noindent\begin{tabularx}{\linewidth}{@{}F A E R@{}}
+\toprule[0.65pt]
+\rowcolor{phasefill}
+\color{wine}\sffamily\bfseries FAMILY &
+\color{wine}\sffamily\bfseries REVIEW COVERAGE &
+\color{wine}\sffamily\bfseries RECENT DIRECTION &
+\color{wine}\sffamily\bfseries ROLE\\
+\midrule[0.45pt]
+Exact and constraint & MIP, CP, CP-SAT, decomposition, bounds & Model-based construction and decomposition & Implement CP-SAT\\
+\midrule[0.35pt]
+Metaheuristics & SA, tabu search, VNS/VND, ALNS, hyper-heuristics & LectureKick Simulated Annealing [5] & Implement SA\\
+\midrule[0.35pt]
+Hybrid methods & Solver-assisted construction and local improvement & CP-SAT initialization followed by VND [6] & Implement a representative hybrid\\
+\midrule[0.35pt]
+Learning-assisted & Feature-based tuning, algorithm selection, adaptive control & Instance-space and algorithm-selection studies [3] & Literature review\\
+\bottomrule[0.65pt]
+\end{tabularx}
+
+\proposalheading{Current and emerging approaches}
+{\fontsize{8.65}{10.05}\selectfont\justifying
+Recent literature presents several complementary directions. Competitive methods combine strong representations with neighbourhood search, adaptive control, decomposition, or mathematical solvers. Ceschia et al. [5] revisit SA with the \textit{LectureKick} neighbourhood and show that carefully designed local search remains competitive. Nguyen [6] uses CP-SAT to obtain a feasible timetable before applying VND. Other studies explore ALNS, matheuristics, feature-based tuning, and algorithm selection. The project will analyse these published approaches and place its implementations within that existing body of work.\par}
+
+\proposalheading{Methods considered for implementation}
+{\fontsize{8.65}{10.05}\selectfont\justifying
+We intend to implement and evaluate three representative approaches: a direct CP-SAT model, a Simulated Annealing solver, and a hybrid in which CP-SAT constructs a feasible timetable that is subsequently improved by VND. The hybrid will be a focused implementation informed by Nguyen's approach. The study will use the \textbf{19 non-redundant ITC-2007 UD2 instances}. Instance \texttt{comp11} is normally omitted because competitive methods consistently reach cost zero, and \texttt{comp15} is identical to \texttt{comp03} under UD2 [1]. The practical comparison will focus on feasibility, solution quality, and running time. The precise evaluation procedure will be settled after the literature review and initial implementations.\par}
+
+\proposalheading{Expected contribution and scope}
+{\fontsize{8.55}{9.9}\selectfont\justifying
+The expected contribution is a concise account of how current CB-CTT methods relate to one another, supported by transparent implementations of three representative choices. The study will clarify their assumptions, practical trade-offs, and relationship with recent research. Its scope covers literature synthesis, implementation, and comparative analysis on a public benchmark. Learning-assisted methods will be examined through the literature. The practical component will focus on established optimization approaches.\par}
+
+\proposalheading{References}
+{\fontsize{6.8}{7.75}\selectfont\raggedright
+[1] Ceschia, Di Gaspero, and Schaerf, ``Educational timetabling: Problems, benchmarks, and state-of-the-art results,'' \textit{EJOR}, 308, 1--18, 2023. \quad
+[2] Abdipoor et al., ``Metaheuristic approaches for university timetabling problems,'' \textit{Intelligent Systems with Applications}, 19, 200253, 2023. \quad
+[3] De la Rosa-Rivera et al., ``Algorithm selection for educational timetabling,'' \textit{Expert Systems with Applications}, 174, 114694, 2021.\par
+[4] Gu et al., ``From integer programming to machine learning: A survey on solving university timetabling problems,'' \textit{Computation}, 13(1), 10, 2025. \quad
+[5] Ceschia et al., ``Revisiting local search for curriculum-based course timetabling,'' \textit{Computers \& Operations Research}, 195, 107621, 2026. \quad
+[6] Nguyen, ``Adaptive penalty-guided VND with CP-SAT for curriculum-based course timetabling,'' \textit{ICAART}, 3398--3405, 2026. \quad
+[7] Di Gaspero, McCollum, and Schaerf, \textit{The Second International Timetabling Competition (ITC-2007): Curriculum-Based Course Timetabling}, 2007.}
+
+\vfill
+{\color{rulegray}\rule{\linewidth}{0.55pt}}\vspace{0.6mm}
+{\color{muted}\sffamily\fontsize{7.1}{8.2}\selectfont
+Methodology and Research Techniques \textbar{} Practice 1 \textbar{} 2026--2027
+\hfill Research proposal}
+
+\end{minipage}
+\end{document}
