@@ -49,7 +49,7 @@
   {\fontsize{24}{27}\selectfont University Course Timetabling\par}
   \vspace{2.0mm}
   {\color{muted}\sffamily\fontsize{8.8}{10.2}\selectfont\bfseries
-  STATE OF THE ART AND REPRESENTATIVE METHODS FOR\par
+  STATE OF THE ART AND REPRODUCIBILITY IN\par
   CURRICULUM-BASED COURSE TIMETABLING\par}
   \vspace{2.0mm}
   {\color{wine}\rule{36mm}{0.8pt}}
@@ -57,11 +57,11 @@
 
 \proposalheading{Problem and objective}
 {\fontsize{9.4}{11.2}\selectfont\justifying
-University timetabling assigns lectures to periods and rooms under teacher, room, and curriculum constraints. Timetable quality also depends on room capacity, weekly distribution, curriculum compactness, and room stability. This study focuses on \textbf{Curriculum-Based Course Timetabling (CB-CTT)} and the public UD2 formulation from ITC-2007. It will review current methods and compare a small set of representative implementations.\par}
+University timetabling assigns lectures to periods and rooms under teacher, room, and curriculum constraints. Timetable quality also depends on room capacity, weekly distribution, curriculum compactness, and room stability. This study focuses on \textbf{Curriculum-Based Course Timetabling (CB-CTT)} and the public UD2 formulation from ITC-2007. Its aim is to review current methods and assess whether recent open-source results can be reproduced.\par}
 
 \proposalheading{Scope of the review}
 {\fontsize{9.2}{11}\selectfont\justifying
-The review will cover CB-CTT research published from 2015 to September 2026, plus the foundational work behind the benchmark. Searches in Scopus, Web of Science, and IEEE Xplore will be extended through citation tracing. Each paper will be classified by formulation, dataset, method, evidence, computational setting, and code availability. The analysis will examine how each family builds feasible timetables, improves their quality, and uses information about the instance. Work on other timetabling variants will be included when the method transfers to CB-CTT.\par}
+The review will cover CB-CTT research published from 2015 to September 2026, together with the foundational work behind the benchmark. Searches in Scopus, Web of Science, and IEEE Xplore will be extended through citation tracing. Studies will be compared by formulation, dataset, method, evidence, computational setting, and code availability. The review will cover exact and constraint methods, metaheuristics, hybrid approaches, and learning-assisted techniques. ITC-2019 will provide a more recent point of comparison because it includes student sectioning and richer institutional constraints.\par}
 
 \vspace{0.7mm}
 \noindent\begin{tabularx}{\linewidth}{@{}F A E@{}}
@@ -81,13 +81,13 @@ Learning-assisted & Feature-based tuning, algorithm selection, adaptive control 
 \bottomrule[0.65pt]
 \end{tabularx}
 
-\proposalheading{Planned implementation}
+\proposalheading{Reproducibility study}
 {\fontsize{9.2}{11}\selectfont\justifying
-We intend to implement CP-SAT, Simulated Annealing, and a CP-SAT plus VND hybrid informed by Nguyen [6]. CP-SAT provides a direct model of the constraints and objective. SA represents stochastic local search, while the hybrid combines solver-based construction with neighbourhood improvement. Evaluation will use the \textbf{19 non-redundant ITC-2007 UD2 instances}. Instance \texttt{comp11} is omitted because competitive methods consistently reach cost zero. Instance \texttt{comp15} duplicates \texttt{comp03} under UD2 [1]. The comparison will report feasibility, objective value, and running time. Its final design will be fixed after the review and initial trials.\par}
+The practical work will reproduce selected experiments from Ceschia et al. [5]. Their public repository includes source code, benchmark instances, and the parameter configuration used in the study. We will compile and run the solver on the \textbf{19 non-redundant ITC-2007 UD2 instances}, compare objective values and running times with the published results, and document the execution environment and any discrepancies. Instance \texttt{comp11} is omitted because competitive methods consistently reach cost zero. Instance \texttt{comp15} duplicates \texttt{comp03} under UD2 [1].\par}
 
 \proposalheading{Expected contribution and scope}
 {\fontsize{9.2}{11}\selectfont\justifying
-The final article will connect the literature review with results from the three implementations. It will identify their practical differences and place them alongside recent CB-CTT work. Learning-assisted approaches will remain part of the review.\par}
+The final article will combine a critical review of CB-CTT with an assessment of the reproducibility of a recent open-source solver. The discussion will address the strength of the available evidence, reporting transparency, and the limits of applying ITC-2007 results to present-day university timetabling.\par}
 
 \proposalheading{References}
 {\fontsize{7.2}{8.3}\selectfont\raggedright
@@ -102,7 +102,7 @@ The final article will connect the literature review with results from the three
 \vfill
 {\color{rulegray}\rule{\linewidth}{0.55pt}}\vspace{0.6mm}
 {\color{muted}\sffamily\fontsize{7.1}{8.2}\selectfont
-Methodology and Research Techniques \textbar{} Practice 1 \textbar{} 2026--2027
+Methodology and Research Techniques \textbar{} Practice 1 \textbar{} 2026-2027
 \hfill Research proposal}
 
 \end{minipage}
