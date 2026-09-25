@@ -49,19 +49,19 @@
   {\fontsize{24}{27}\selectfont Planificación de Horarios Universitarios\par}
   \vspace{2.0mm}
   {\color{muted}\sffamily\fontsize{8.8}{10.2}\selectfont\bfseries
-  ESTADO DEL ARTE Y REPRODUCIBILIDAD EN LA\par
-  PLANIFICACIÓN DE HORARIOS BASADA EN PLANES DE ESTUDIO\par}
+  REVISIÓN DEL ESTADO DEL ARTE Y\par
+  ESTUDIO DE REPRODUCIBILIDAD\par}
   \vspace{2.0mm}
   {\color{wine}\rule{36mm}{0.8pt}}
 \end{center}
 
 \proposalheading{Problema y objetivo}
 {\fontsize{9.4}{11.2}\selectfont\justifying
-La planificación de horarios universitarios asigna clases a periodos y aulas bajo restricciones de profesorado, espacios y planes de estudio. La calidad del horario también depende de la capacidad de las aulas, la distribución semanal, la compactación de las clases y la estabilidad del aula. Este trabajo se centra en el problema \textbf{Curriculum-Based Course Timetabling (CB-CTT)} y en la formulación pública UD2 de ITC-2007. Su objetivo es revisar los métodos actuales y comprobar si pueden reproducirse resultados recientes obtenidos con software de código abierto.\par}
+La planificación de horarios universitarios consiste en asignar clases a periodos y aulas respetando las restricciones de profesorado, disponibilidad, capacidad y solapamiento. Un buen horario también debe evitar clases aisladas, repartir las sesiones de cada asignatura y reducir los cambios de aula. Este trabajo se centrará en el problema \textbf{Curriculum-Based Course Timetabling (CB-CTT)} y en la formulación pública UD2 de ITC-2007. Revisaremos los métodos actuales y comprobaremos si pueden reproducirse resultados recientes obtenidos con código abierto.\par}
 
 \proposalheading{Alcance de la revisión}
 {\fontsize{9.2}{11}\selectfont\justifying
-La revisión abarcará investigaciones sobre CB-CTT publicadas entre 2015 y septiembre de 2026, además de los trabajos fundacionales del benchmark. Las búsquedas en Scopus, Web of Science e IEEE Xplore se ampliarán mediante rastreo de citas. Los estudios se compararán según su formulación, conjunto de datos, método, evidencia, entorno computacional y disponibilidad del código. La revisión incluirá métodos exactos y basados en restricciones, metaheurísticas, enfoques híbridos y técnicas asistidas por aprendizaje automático. ITC-2019 servirá como referencia más reciente porque incorpora la asignación de estudiantes a grupos y restricciones institucionales más completas.\par}
+Revisaremos los trabajos sobre CB-CTT publicados entre 2015 y septiembre de 2026, junto con los artículos que definieron el problema y el benchmark. Nos interesa conocer qué métodos se utilizan, con qué datos se evalúan y si los resultados pueden comprobarse. El análisis incluirá métodos exactos y basados en restricciones, metaheurísticas, enfoques híbridos y propuestas que incorporan aprendizaje automático. También tendremos en cuenta ITC-2019, una formulación más reciente que añade la asignación de estudiantes a grupos y restricciones institucionales más completas.\par}
 
 \vspace{0.7mm}
 \noindent\begin{tabularx}{\linewidth}{@{}F A E@{}}
@@ -75,19 +75,19 @@ Métodos exactos y de restricciones & MIP, CP, CP-SAT, descomposición y cotas &
 \midrule[0.35pt]
 Metaheurísticas & SA, búsqueda tabú, VNS/VND, ALNS e hiperheurísticas & Simulated Annealing con LectureKick [5]\\
 \midrule[0.35pt]
-Métodos híbridos & Construcción asistida por solvers y mejora local & Inicialización con CP-SAT seguida de VND [6]\\
+Métodos híbridos & Construcción mediante modelos y mejora local & Inicialización con CP-SAT seguida de VND [6]\\
 \midrule[0.35pt]
-Métodos con aprendizaje & Ajuste basado en características, selección de algoritmos y control adaptativo & Espacio de instancias y selección de algoritmos [3]\\
+Aprendizaje automático & Ajuste de parámetros, selección de algoritmos y control adaptativo & Espacio de instancias y selección de algoritmos [3]\\
 \bottomrule[0.65pt]
 \end{tabularx}
 
 \proposalheading{Estudio de reproducibilidad}
 {\fontsize{9.2}{11}\selectfont\justifying
-El trabajo práctico reproducirá una selección de experimentos de Ceschia et al. [5]. Su repositorio público incluye el código fuente, las instancias del benchmark y la configuración de parámetros utilizada en el estudio. Compilaremos y ejecutaremos el solver sobre las \textbf{19 instancias no redundantes de ITC-2007 UD2}, compararemos los valores de la función objetivo y los tiempos de ejecución con los resultados publicados, y documentaremos el entorno y las discrepancias observadas. Se excluye \texttt{comp11} porque los métodos competitivos alcanzan de forma consistente un coste cero. La instancia \texttt{comp15} es equivalente a \texttt{comp03} bajo UD2 [1].\par}
+El trabajo práctico reproducirá una selección de experimentos de Ceschia et al. [5]. Su repositorio público incluye el código fuente, las instancias del benchmark y la configuración utilizada en el estudio. Compilaremos y ejecutaremos el programa sobre las \textbf{19 instancias no redundantes de ITC-2007 UD2}. Después compararemos la función objetivo y el tiempo de ejecución con los valores publicados, dejando constancia del entorno utilizado y de las posibles diferencias. Se excluye \texttt{comp11} porque los métodos competitivos alcanzan de forma consistente un coste cero. La instancia \texttt{comp15} es equivalente a \texttt{comp03} bajo UD2 [1].\par}
 
-\proposalheading{Contribución y alcance esperados}
+\proposalheading{Resultado esperado}
 {\fontsize{9.2}{11}\selectfont\justifying
-El artículo combinará una revisión crítica de CB-CTT con la evaluación de la reproducibilidad de un solver reciente de código abierto. La discusión abordará la solidez de la evidencia disponible, la transparencia al comunicar los resultados y los límites de aplicar los resultados de ITC-2007 a la planificación universitaria actual.\par}
+La revisión crítica de CB-CTT irá acompañada de la reproducción de un programa reciente de código abierto. Contrastaremos lo descrito en la literatura con los resultados que obtengamos al ejecutar el código. También discutiremos hasta dónde pueden trasladarse las conclusiones de ITC-2007 a los problemas universitarios actuales.\par}
 
 \proposalheading{Referencias}
 {\fontsize{7.2}{8.3}\selectfont\raggedright
