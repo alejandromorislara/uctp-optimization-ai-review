@@ -18,7 +18,8 @@ The published solver will be compiled and tested on the 19 non-redundant ITC-200
 
 ## Entrega actual
 
-- [`output/pdf/MET_Block_I_Research_Proposal_SOTA.pdf`](output/pdf/MET_Block_I_Research_Proposal_SOTA.pdf): propuesta actualizada de una página para la aprobación del profesor.
+- [`output/pdf/MET_Block_I_Research_Proposal_SOTA_ES.pdf`](output/pdf/MET_Block_I_Research_Proposal_SOTA_ES.pdf): propuesta actualizada en español para la aprobación del profesor.
+- [`output/pdf/MET_Block_I_Research_Proposal_SOTA.pdf`](output/pdf/MET_Block_I_Research_Proposal_SOTA.pdf): versión equivalente en inglés.
 - [`Practicas/MET_Block_I_Research_Proposal.pdf`](Practicas/MET_Block_I_Research_Proposal.pdf): versión original conservada como referencia visual.
 
 The full article, reproducibility materials, results, and poster will be added after the topic has been approved.
