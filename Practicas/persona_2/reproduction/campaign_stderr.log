@@ -1,0 +1,794 @@
+C:\Users\Alejandro\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell : El t‚rmino 
+'C:\Users\Alejandro\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell' no se reconoce como 
+nombre de un cmdlet, funci¢n, archivo de script o programa ejecutable. Compruebe si escribi¢ correctamente el nombre 
+o, si incluy¢ una ruta de acceso, compruebe que dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 1
++ C:\Users\Alejandro\.cache\codex-runtimes\codex-primary-runtime\depend ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\Alejan...tive\powershell:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Users\Alejandro\.codex\tmp\arg0\codex-arg03lwMxu : El t‚rmino 'C:\Users\Alejandro\.codex\tmp\arg0\codex-arg03lwMxu' 
+no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa ejecutable. Compruebe si escribi¢ 
+correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 95
++ ... \powershell;C:\Users\Alejandro\.codex\tmp\arg0\codex-arg03lwMxu;C:\Us ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\Alejan...odex-arg03lwMxu:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Users\Alejandro\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\libheif\libheif\bin : El t‚rmino 
+'C:\Users\Alejandro\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\libheif\libheif\bin' no se 
+reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa ejecutable. Compruebe si escribi¢ 
+correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 147
++ ... -arg03lwMxu;C:\Users\Alejandro\.cache\codex-runtimes\codex-primary-ru ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\Alejan...eif\libheif\bin:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Users\Alejandro\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\jxrlib\jxrlib\bin : El t‚rmino 
+'C:\Users\Alejandro\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\jxrlib\jxrlib\bin' no se reconoce 
+como nombre de un cmdlet, funci¢n, archivo de script o programa ejecutable. Compruebe si escribi¢ correctamente el 
+nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 250
++ ... libheif\bin;C:\Users\Alejandro\.cache\codex-runtimes\codex-primary-ru ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\Alejan...rlib\jxrlib\bin:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Users\Alejandro\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\poppler\Library\bin : El t‚rmino 
+'C:\Users\Alejandro\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\poppler\Library\bin' no se 
+reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa ejecutable. Compruebe si escribi¢ 
+correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 351
++ ... \jxrlib\bin;C:\Users\Alejandro\.cache\codex-runtimes\codex-primary-ru ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\Alejan...ler\Library\bin:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Users\Alejandro\.cache\codex-runtimes\codex-primary-runtime\dependencies\bin\override : El t‚rmino 
+'C:\Users\Alejandro\.cache\codex-runtimes\codex-primary-runtime\dependencies\bin\override' no se reconoce como nombre 
+de un cmdlet, funci¢n, archivo de script o programa ejecutable. Compruebe si escribi¢ correctamente el nombre o, si 
+incluy¢ una ruta de acceso, compruebe que dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 454
++ ... Library\bin;C:\Users\Alejandro\.cache\codex-runtimes\codex-primary-ru ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\Alejan...es\bin\override:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Program : El t‚rmino 'C:\Program' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa 
+ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta 
+es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 543
++ ... es\codex-primary-runtime\dependencies\bin\override;C:\Program Files\N ...
++                                                        ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Program:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Program : El t‚rmino 'C:\Program' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa 
+ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta 
+es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 582
++ ... in\override;C:\Program Files\NVIDIA\CUDNN\v9.5\bin;C:\Program Files\N ...
++                                                        ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Program:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Program : El t‚rmino 'C:\Program' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa 
+ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta 
+es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 643
++ ...  Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\bin;C:\Program Files\N ...
++                                                        ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Program:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+%D:\Tor : El t‚rmino '%D:\Tor' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa 
+ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta 
+es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 708
++ ... Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\libnvvp;%D:\Tor Browser ...
++                                                           ~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (%D:\Tor:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+D:\Tor : El t‚rmino 'D:\Tor' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa 
+ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta 
+es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 755
++ ... libnvvp;%D:\Tor Browser\Browser\TorBrowser\Tor\tor.exe;D:\Tor Browser ...
++                                                            ~~~~~~
+    + CategoryInfo          : ObjectNotFound: (D:\Tor:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Windows\system32 : El t‚rmino 'C:\Windows\system32' no se reconoce como nombre de un cmdlet, funci¢n, archivo de 
+script o programa ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, 
+compruebe que dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 786
++ ... or\tor.exe;D:\Tor Browser\Browser\firefox;C:\Windows\system32;C:\Wind ...
++                                               ~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Windows\system32:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Windows : El t‚rmino 'C:\Windows' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa 
+ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta 
+es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 806
++ ... D:\Tor Browser\Browser\firefox;C:\Windows\system32;C:\Windows;C:\Wind ...
++                                                        ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Windows:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Windows\System32\Wbem : El t‚rmino 'C:\Windows\System32\Wbem' no se reconoce como nombre de un cmdlet, funci¢n, 
+archivo de script o programa ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de 
+acceso, compruebe que dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 817
++ ... refox;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Wind ...
++                                          ~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Windows\System32\Wbem:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Windows\System32\WindowsPowerShell\v1.0\ : El t‚rmino 'C:\Windows\System32\WindowsPowerShell\v1.0\' no se reconoce 
+como nombre de un cmdlet, funci¢n, archivo de script o programa ejecutable. Compruebe si escribi¢ correctamente el 
+nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 842
++ ... ows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Wind ...
++                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Windows\Syst...owerShell\v1.0\:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Windows\System32\OpenSSH\ : El t‚rmino 'C:\Windows\System32\OpenSSH\' no se reconoce como nombre de un cmdlet, 
+funci¢n, archivo de script o programa ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta 
+de acceso, compruebe que dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 886
++ ... System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\;C:\ ...
++                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Windows\System32\OpenSSH\:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+D:\ : El t‚rmino 'D:\' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa ejecutable. 
+Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta es correcta e 
+int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 915
++ ... em32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\;C:\Prog ...
++                                                               ~~~
+    + CategoryInfo          : ObjectNotFound: (D:\:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+x86 : El t‚rmino 'x86' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa ejecutable. 
+Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta es correcta e 
+int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 937
++ ... \v1.0\;C:\Windows\System32\OpenSSH\;D:\;C:\Program Files (x86)\Micros ...
++                                                               ~~~
+    + CategoryInfo          : ObjectNotFound: (x86:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Program : El t‚rmino 'C:\Program' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa 
+ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta 
+es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 979
++ ... m Files (x86)\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\M ...
++                                                        ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Program:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Program : El t‚rmino 'C:\Program' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa 
+ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta 
+es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 1033
++ ... Program Files\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\M ...
++                                                        ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Program:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Program : El t‚rmino 'C:\Program' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa 
+ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta 
+es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 1103
++ ... crosoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\M ...
++                                                        ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Program:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+D:\AutoFirma\AutoFirma : El t‚rmino 'D:\AutoFirma\AutoFirma' no se reconoce como nombre de un cmdlet, funci¢n, archivo 
+de script o programa ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, 
+compruebe que dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 1155
++ ... les\Microsoft SQL Server\160\DTS\Binn\;D:\AutoFirma\AutoFirma;C:\Prog ...
++                                            ~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (D:\AutoFirma\AutoFirma:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Program : El t‚rmino 'C:\Program' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa 
+ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta 
+es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 1178
++ ... ft SQL Server\160\DTS\Binn\;D:\AutoFirma\AutoFirma;C:\Program Files\P ...
++                                                        ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Program:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Users\Alejandro\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\P
+ython38\Scripts : El t‚rmino 'C:\Users\Alejandro\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8
+p0\LocalCache\local-packages\Python38\Scripts' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o 
+programa ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que 
+dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 1202
++ ... iles\Pandoc;C:\Users\Alejandro\AppData\Local\Packages\PythonSoftwareF ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\Alejan...ython38\Scripts:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+D:\Git\cmd : El t‚rmino 'D:\Git\cmd' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa 
+ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta 
+es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 1337
++ ... kfra8p0\LocalCache\local-packages\Python38\Scripts;D:\Git\cmd;C:\Prog ...
++                                                        ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (D:\Git\cmd:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Program : El t‚rmino 'C:\Program' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa 
+ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta 
+es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 1348
++ ... alCache\local-packages\Python38\Scripts;D:\Git\cmd;C:\Program Files\N ...
++                                                        ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Program:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+x86 : El t‚rmino 'x86' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa ejecutable. 
+Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta es correcta e 
+int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 1427
++ ... IA Corporation\Nsight Compute 2022.3.0\;C:\Program Files (x86)\NVIDIA ...
++                                                               ~~~
+    + CategoryInfo          : ObjectNotFound: (x86:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Program : El t‚rmino 'C:\Program' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa 
+ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta 
+es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 1464
++ ... rogram Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\N ...
++                                                        ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Program:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+D:\grok\ngrok-v3-stable-windows-amd64 : El t‚rmino 'D:\grok\ngrok-v3-stable-windows-amd64' no se reconoce como nombre 
+de un cmdlet, funci¢n, archivo de script o programa ejecutable. Compruebe si escribi¢ correctamente el nombre o, si 
+incluy¢ una ruta de acceso, compruebe que dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 1515
++ ... poration\NVIDIA NvDLISR;D:\grok\ngrok-v3-stable-windows-amd64;C:\Prog ...
++                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (D:\grok\ngrok-v3-stable-windows-amd64:String) [], CommandNotFoundExcept 
+   ion
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Program : El t‚rmino 'C:\Program' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa 
+ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta 
+es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 1553
++ ... IDIA NvDLISR;D:\grok\ngrok-v3-stable-windows-amd64;C:\Program Files\D ...
++                                                        ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Program:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Users\Alejandro\AppData\Roaming\npm\node_modules\.bin : El t‚rmino 
+'C:\Users\Alejandro\AppData\Roaming\npm\node_modules\.bin' no se reconoce como nombre de un cmdlet, funci¢n, archivo 
+de script o programa ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, 
+compruebe que dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 1598
++ ... sources\bin;C:\Users\Alejandro\AppData\Roaming\npm\node_modules\.bin; ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\Alejan...de_modules\.bin:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+%SPARK_HOME%\bin : El m¢dulo '%SPARK_HOME%' no pudo cargarse. Para obtener m s informaci¢n, ejecute 'Import-Module 
+%SPARK_HOME%'.
+En l¡nea: 1 Car cter: 1655
++ ... jandro\AppData\Roaming\npm\node_modules\.bin;%SPARK_HOME%\bin;C:\hado ...
++                                                  ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (%SPARK_HOME%\bin:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CouldNotAutoLoadModule
+ 
+C:\hadoop\bin : El t‚rmino 'C:\hadoop\bin' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o 
+programa ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que 
+dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 1672
++ ... \Roaming\npm\node_modules\.bin;%SPARK_HOME%\bin;C:\hadoop\bin;D:\Grap ...
++                                                     ~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\hadoop\bin:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+D:\Graphviz\bin : El t‚rmino 'D:\Graphviz\bin' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o 
+programa ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que 
+dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 1686
++ ... e_modules\.bin;%SPARK_HOME%\bin;C:\hadoop\bin;D:\Graphviz\bin;C:\User ...
++                                                   ~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (D:\Graphviz\bin:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+Error: Input must be provided either through stdin or as a prompt argument when using --print
+x86 : El t‚rmino 'x86' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa ejecutable. 
+Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta es correcta e 
+int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 1761
++ ... :\Users\Alejandro\.local\bin\claude.exe;C:\Program Files (x86)\Window ...
++                                                               ~~~
+    + CategoryInfo          : ObjectNotFound: (x86:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Program : El t‚rmino 'C:\Program' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa 
+ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta 
+es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 1811
++ ... (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\W ...
++                                                        ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Program:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Users\Alejandro\.local\bin : El t‚rmino 'C:\Users\Alejandro\.local\bin' no se reconoce como nombre de un cmdlet, 
+funci¢n, archivo de script o programa ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta 
+de acceso, compruebe que dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 1843
++ ... C:\Program Files\WSL\;$env:PATH;C:\Users\Alejandro\.local\bin;C:\User ...
++                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\Alejandro\.local\bin:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Users\Alejandro\AppData\Local\Programs\cursor\resources\app\bin : El t‚rmino 
+'C:\Users\Alejandro\AppData\Local\Programs\cursor\resources\app\bin' no se reconoce como nombre de un cmdlet, funci¢n, 
+archivo de script o programa ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de 
+acceso, compruebe que dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 1873
++ ... \.local\bin;C:\Users\Alejandro\AppData\Local\Programs\cursor\resource ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\Alejan...sources\app\bin:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Users\Alejandro\.lmstudio\bin : El t‚rmino 'C:\Users\Alejandro\.lmstudio\bin' no se reconoce como nombre de un 
+cmdlet, funci¢n, archivo de script o programa ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ 
+una ruta de acceso, compruebe que dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 1940
++ ... ams\cursor\resources\app\bin;C:\Users\Alejandro\.lmstudio\bin;D:\Micr ...
++                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\Alejandro\.lmstudio\bin:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+D:\Microsoft : El t‚rmino 'D:\Microsoft' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o 
+programa ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que 
+dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 1973
++ ... sources\app\bin;C:\Users\Alejandro\.lmstudio\bin;D:\Microsoft VS Code ...
++                                                      ~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (D:\Microsoft:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Users\Alejandro\AppData\Local\Programs\Antigravity\bin : El t‚rmino 
+'C:\Users\Alejandro\AppData\Local\Programs\Antigravity\bin' no se reconoce como nombre de un cmdlet, funci¢n, archivo 
+de script o programa ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, 
+compruebe que dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 1998
++ ... VS Code\bin;C:\Users\Alejandro\AppData\Local\Programs\Antigravity\bin ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\Alejan...Antigravity\bin:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+D:\Python_D\nlp-pl\.tools\ffmpeg-8.1.1-essentials_build\bin : El t‚rmino 
+'D:\Python_D\nlp-pl\.tools\ffmpeg-8.1.1-essentials_build\bin' no se reconoce como nombre de un cmdlet, funci¢n, 
+archivo de script o programa ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de 
+acceso, compruebe que dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 2056
++ ... gravity\bin;D:\Python_D\nlp-pl\.tools\ffmpeg-8.1.1-essentials_build\b ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (D:\Python_D\nlp...tials_build\bin:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Users\Alejandro\AppData\Local\Programs\Antigravity : El t‚rmino 
+'C:\Users\Alejandro\AppData\Local\Programs\Antigravity' no se reconoce como nombre de un cmdlet, funci¢n, archivo de 
+script o programa ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, 
+compruebe que dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 2116
++ ... s_build\bin;C:\Users\Alejandro\AppData\Local\Programs\Antigravity IDE ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\Alejan...ams\Antigravity:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Users\Alejandro\AppData\Local\Programs\GitHub : El t‚rmino 'C:\Users\Alejandro\AppData\Local\Programs\GitHub' no se 
+reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa ejecutable. Compruebe si escribi¢ 
+correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 2178
++ ... vity IDE\bin;C:\Users\Alejandro\AppData\Local\Programs\GitHub CLI\2.9 ...
++                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\Alejan...Programs\GitHub:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Users\Alejandro\AppData\Local\Programs\Azure : El t‚rmino 'C:\Users\Alejandro\AppData\Local\Programs\Azure' no se 
+reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa ejecutable. Compruebe si escribi¢ 
+correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 2242
++ ... LI\2.97.0\bin;C:\Users\Alejandro\AppData\Local\Programs\Azure CLI\2.8 ...
++                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\Alejan...\Programs\Azure:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Users\Alejandro\AppData\Local\Programs\Terraform\1.15.8 : El t‚rmino 
+'C:\Users\Alejandro\AppData\Local\Programs\Terraform\1.15.8' no se reconoce como nombre de un cmdlet, funci¢n, archivo 
+de script o programa ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, 
+compruebe que dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 2305
++ ... \2.88.0\bin;C:\Users\Alejandro\AppData\Local\Programs\Terraform\1.15. ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\Alejan...erraform\1.15.8:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Users\Alejandro\.cache\codex-runtimes\codex-primary-runtime\dependencies\bin\fallback : El t‚rmino 
+'C:\Users\Alejandro\.cache\codex-runtimes\codex-primary-runtime\dependencies\bin\fallback' no se reconoce como nombre 
+de un cmdlet, funci¢n, archivo de script o programa ejecutable. Compruebe si escribi¢ correctamente el nombre o, si 
+incluy¢ una ruta de acceso, compruebe que dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 2364
++ ... form\1.15.8;C:\Users\Alejandro\.cache\codex-runtimes\codex-primary-ru ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\Alejan...es\bin\fallback:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Users\Alejandro\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin : El t‚rmino 
+'C:\Users\Alejandro\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin' no se reconoce como nombre de 
+un cmdlet, funci¢n, archivo de script o programa ejecutable. Compruebe si escribi¢ correctamente el nombre o, si 
+incluy¢ una ruta de acceso, compruebe que dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 2453
++ ... in\fallback;C:\Users\Alejandro\.cache\codex-runtimes\codex-primary-ru ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\Alejan...encies\node\bin:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Users\Alejandro\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\git\cmd : El t‚rmino 
+'C:\Users\Alejandro\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\git\cmd' no se reconoce como 
+nombre de un cmdlet, funci¢n, archivo de script o programa ejecutable. Compruebe si escribi¢ correctamente el nombre 
+o, si incluy¢ una ruta de acceso, compruebe que dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 2538
++ ... es\node\bin;C:\Users\Alejandro\.cache\codex-runtimes\codex-primary-ru ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\Alejan...\native\git\cmd:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Users\Alejandro\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell : El t‚rmino 
+'C:\Users\Alejandro\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell' no se reconoce como 
+nombre de un cmdlet, funci¢n, archivo de script o programa ejecutable. Compruebe si escribi¢ correctamente el nombre 
+o, si incluy¢ una ruta de acceso, compruebe que dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 2629
++ ... ive\git\cmd;C:\Users\Alejandro\.cache\codex-runtimes\codex-primary-ru ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\Alejan...tive\powershell:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Users\Alejandro\AppData\Local\OpenAI\Codex\bin\f1e5e36960c35938 : El t‚rmino 
+'C:\Users\Alejandro\AppData\Local\OpenAI\Codex\bin\f1e5e36960c35938' no se reconoce como nombre de un cmdlet, funci¢n, 
+archivo de script o programa ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de 
+acceso, compruebe que dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 2723
++ ... \powershell;C:\Users\Alejandro\AppData\Local\OpenAI\Codex\bin\f1e5e36 ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\Alejan...1e5e36960c35938:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Users\Alejandro\AppData\Local\OpenAI\Codex\bin\8aaf1547b825b104=D:\Python_D\codex-persona2-msys64\ucrt64\bin; : El 
+t‚rmino 
+'C:\Users\Alejandro\AppData\Local\OpenAI\Codex\bin\8aaf1547b825b104=D:\Python_D\codex-persona2-msys64\ucrt64\bin;' no 
+se reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa ejecutable. Compruebe si escribi¢ 
+correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 2790
++ ... 36960c35938;C:\Users\Alejandro\AppData\Local\OpenAI\Codex\bin\8aaf154 ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\Alejan...s64\ucrt64\bin;:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Users\Alejandro\.codex\tmp\arg0\codex-arg03lwMxu : El t‚rmino 'C:\Users\Alejandro\.codex\tmp\arg0\codex-arg03lwMxu' 
+no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa ejecutable. Compruebe si escribi¢ 
+correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 3001
++ ... \powershell;C:\Users\Alejandro\.codex\tmp\arg0\codex-arg03lwMxu;C:\Us ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\Alejan...odex-arg03lwMxu:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Users\Alejandro\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\libheif\libheif\bin : El t‚rmino 
+'C:\Users\Alejandro\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\libheif\libheif\bin' no se 
+reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa ejecutable. Compruebe si escribi¢ 
+correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 3053
++ ... -arg03lwMxu;C:\Users\Alejandro\.cache\codex-runtimes\codex-primary-ru ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\Alejan...eif\libheif\bin:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Users\Alejandro\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\jxrlib\jxrlib\bin : El t‚rmino 
+'C:\Users\Alejandro\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\jxrlib\jxrlib\bin' no se reconoce 
+como nombre de un cmdlet, funci¢n, archivo de script o programa ejecutable. Compruebe si escribi¢ correctamente el 
+nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 3156
++ ... libheif\bin;C:\Users\Alejandro\.cache\codex-runtimes\codex-primary-ru ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\Alejan...rlib\jxrlib\bin:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Users\Alejandro\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\poppler\Library\bin : El t‚rmino 
+'C:\Users\Alejandro\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\poppler\Library\bin' no se 
+reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa ejecutable. Compruebe si escribi¢ 
+correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 3257
++ ... \jxrlib\bin;C:\Users\Alejandro\.cache\codex-runtimes\codex-primary-ru ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\Alejan...ler\Library\bin:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Users\Alejandro\.cache\codex-runtimes\codex-primary-runtime\dependencies\bin\override : El t‚rmino 
+'C:\Users\Alejandro\.cache\codex-runtimes\codex-primary-runtime\dependencies\bin\override' no se reconoce como nombre 
+de un cmdlet, funci¢n, archivo de script o programa ejecutable. Compruebe si escribi¢ correctamente el nombre o, si 
+incluy¢ una ruta de acceso, compruebe que dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 3360
++ ... Library\bin;C:\Users\Alejandro\.cache\codex-runtimes\codex-primary-ru ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\Alejan...es\bin\override:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Program : El t‚rmino 'C:\Program' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa 
+ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta 
+es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 3449
++ ... es\codex-primary-runtime\dependencies\bin\override;C:\Program Files\N ...
++                                                        ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Program:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Program : El t‚rmino 'C:\Program' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa 
+ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta 
+es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 3488
++ ... in\override;C:\Program Files\NVIDIA\CUDNN\v9.5\bin;C:\Program Files\N ...
++                                                        ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Program:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Program : El t‚rmino 'C:\Program' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa 
+ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta 
+es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 3549
++ ...  Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\bin;C:\Program Files\N ...
++                                                        ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Program:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+%D:\Tor : El t‚rmino '%D:\Tor' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa 
+ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta 
+es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 3614
++ ... Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\libnvvp;%D:\Tor Browser ...
++                                                           ~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (%D:\Tor:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+D:\Tor : El t‚rmino 'D:\Tor' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa 
+ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta 
+es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 3661
++ ... libnvvp;%D:\Tor Browser\Browser\TorBrowser\Tor\tor.exe;D:\Tor Browser ...
++                                                            ~~~~~~
+    + CategoryInfo          : ObjectNotFound: (D:\Tor:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Windows\system32 : El t‚rmino 'C:\Windows\system32' no se reconoce como nombre de un cmdlet, funci¢n, archivo de 
+script o programa ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, 
+compruebe que dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 3692
++ ... or\tor.exe;D:\Tor Browser\Browser\firefox;C:\Windows\system32;C:\Wind ...
++                                               ~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Windows\system32:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Windows : El t‚rmino 'C:\Windows' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa 
+ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta 
+es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 3712
++ ... D:\Tor Browser\Browser\firefox;C:\Windows\system32;C:\Windows;C:\Wind ...
++                                                        ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Windows:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Windows\System32\Wbem : El t‚rmino 'C:\Windows\System32\Wbem' no se reconoce como nombre de un cmdlet, funci¢n, 
+archivo de script o programa ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de 
+acceso, compruebe que dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 3723
++ ... refox;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Wind ...
++                                          ~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Windows\System32\Wbem:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Windows\System32\WindowsPowerShell\v1.0\ : El t‚rmino 'C:\Windows\System32\WindowsPowerShell\v1.0\' no se reconoce 
+como nombre de un cmdlet, funci¢n, archivo de script o programa ejecutable. Compruebe si escribi¢ correctamente el 
+nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 3748
++ ... ows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Wind ...
++                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Windows\Syst...owerShell\v1.0\:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Windows\System32\OpenSSH\ : El t‚rmino 'C:\Windows\System32\OpenSSH\' no se reconoce como nombre de un cmdlet, 
+funci¢n, archivo de script o programa ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta 
+de acceso, compruebe que dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 3792
++ ... System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\;C:\ ...
++                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Windows\System32\OpenSSH\:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+D:\ : El t‚rmino 'D:\' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa ejecutable. 
+Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta es correcta e 
+int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 3821
++ ... em32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\;C:\Prog ...
++                                                               ~~~
+    + CategoryInfo          : ObjectNotFound: (D:\:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+x86 : El t‚rmino 'x86' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa ejecutable. 
+Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta es correcta e 
+int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 3843
++ ... \v1.0\;C:\Windows\System32\OpenSSH\;D:\;C:\Program Files (x86)\Micros ...
++                                                               ~~~
+    + CategoryInfo          : ObjectNotFound: (x86:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Program : El t‚rmino 'C:\Program' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa 
+ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta 
+es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 3885
++ ... m Files (x86)\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\M ...
++                                                        ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Program:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Program : El t‚rmino 'C:\Program' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa 
+ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta 
+es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 3939
++ ... Program Files\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\M ...
++                                                        ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Program:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Program : El t‚rmino 'C:\Program' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa 
+ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta 
+es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 4009
++ ... crosoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\M ...
++                                                        ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Program:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+D:\AutoFirma\AutoFirma : El t‚rmino 'D:\AutoFirma\AutoFirma' no se reconoce como nombre de un cmdlet, funci¢n, archivo 
+de script o programa ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, 
+compruebe que dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 4061
++ ... les\Microsoft SQL Server\160\DTS\Binn\;D:\AutoFirma\AutoFirma;C:\Prog ...
++                                            ~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (D:\AutoFirma\AutoFirma:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Program : El t‚rmino 'C:\Program' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa 
+ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta 
+es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 4084
++ ... ft SQL Server\160\DTS\Binn\;D:\AutoFirma\AutoFirma;C:\Program Files\P ...
++                                                        ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Program:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Users\Alejandro\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\P
+ython38\Scripts : El t‚rmino 'C:\Users\Alejandro\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8
+p0\LocalCache\local-packages\Python38\Scripts' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o 
+programa ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que 
+dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 4108
++ ... iles\Pandoc;C:\Users\Alejandro\AppData\Local\Packages\PythonSoftwareF ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\Alejan...ython38\Scripts:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+D:\Git\cmd : El t‚rmino 'D:\Git\cmd' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa 
+ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta 
+es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 4243
++ ... kfra8p0\LocalCache\local-packages\Python38\Scripts;D:\Git\cmd;C:\Prog ...
++                                                        ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (D:\Git\cmd:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Program : El t‚rmino 'C:\Program' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa 
+ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta 
+es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 4254
++ ... alCache\local-packages\Python38\Scripts;D:\Git\cmd;C:\Program Files\N ...
++                                                        ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Program:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+x86 : El t‚rmino 'x86' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa ejecutable. 
+Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta es correcta e 
+int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 4333
++ ... IA Corporation\Nsight Compute 2022.3.0\;C:\Program Files (x86)\NVIDIA ...
++                                                               ~~~
+    + CategoryInfo          : ObjectNotFound: (x86:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Program : El t‚rmino 'C:\Program' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa 
+ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta 
+es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 4370
++ ... rogram Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\N ...
++                                                        ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Program:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+D:\grok\ngrok-v3-stable-windows-amd64 : El t‚rmino 'D:\grok\ngrok-v3-stable-windows-amd64' no se reconoce como nombre 
+de un cmdlet, funci¢n, archivo de script o programa ejecutable. Compruebe si escribi¢ correctamente el nombre o, si 
+incluy¢ una ruta de acceso, compruebe que dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 4421
++ ... poration\NVIDIA NvDLISR;D:\grok\ngrok-v3-stable-windows-amd64;C:\Prog ...
++                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (D:\grok\ngrok-v3-stable-windows-amd64:String) [], CommandNotFoundExcept 
+   ion
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Program : El t‚rmino 'C:\Program' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa 
+ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta 
+es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 4459
++ ... IDIA NvDLISR;D:\grok\ngrok-v3-stable-windows-amd64;C:\Program Files\D ...
++                                                        ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Program:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+C:\Users\Alejandro\AppData\Roaming\npm\node_modules\.bin : El t‚rmino 
+'C:\Users\Alejandro\AppData\Roaming\npm\node_modules\.bin' no se reconoce como nombre de un cmdlet, funci¢n, archivo 
+de script o programa ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, 
+compruebe que dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 4504
++ ... sources\bin;C:\Users\Alejandro\AppData\Roaming\npm\node_modules\.bin; ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\Alejan...de_modules\.bin:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+%SPARK_HOME%\bin : El m¢dulo '%SPARK_HOME%' no pudo cargarse. Para obtener m s informaci¢n, ejecute 'Import-Module 
+%SPARK_HOME%'.
+En l¡nea: 1 Car cter: 4561
++ ... jandro\AppData\Roaming\npm\node_modules\.bin;%SPARK_HOME%\bin;C:\hado ...
++                                                  ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (%SPARK_HOME%\bin:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CouldNotAutoLoadModule
+ 
+C:\hadoop\bin : El t‚rmino 'C:\hadoop\bin' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o 
+programa ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que 
+dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 4578
++ ... \Roaming\npm\node_modules\.bin;%SPARK_HOME%\bin;C:\hadoop\bin;D:\Grap ...
++                                                     ~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\hadoop\bin:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+D:\Graphviz\bin : El t‚rmino 'D:\Graphviz\bin' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o 
+programa ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que 
+dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 4592
++ ... e_modules\.bin;%SPARK_HOME%\bin;C:\hadoop\bin;D:\Graphviz\bin;C:\User ...
++                                                   ~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (D:\Graphviz\bin:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+Error: Input must be provided either through stdin or as a prompt argument when using --print

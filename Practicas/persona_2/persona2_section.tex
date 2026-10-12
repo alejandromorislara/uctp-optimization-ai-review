@@ -1,0 +1,91 @@
+% Fragmento listo para \input en el artículo conjunto.
+% Requiere graphicx, booktabs y tabularx en el preámbulo principal.
+% La figura debe conservar la ruta figures/lecturekick.pdf.
+\section{Metaheurísticas, híbridos y aprendizaje}
+
+La planificación universitaria basada en currículos, conocida como CB-CTT, mantiene un espacio de búsqueda amplio incluso cuando la factibilidad se alcanza con rapidez. Esta diferencia explica el peso de las metaheurísticas en la literatura. Los métodos exactos pueden demostrar optimalidad o mejorar cotas con presupuestos largos, mientras que la búsqueda local concentra el tiempo disponible en obtener horarios de buena calidad. La comparación solo resulta informativa cuando la formulación, las instancias y el límite de ejecución coinciden \cite{ceschia2023educational}.
+
+\subsection{Metaheurísticas}
+
+Los primeros trabajos sobre CB-CTT combinaron movimientos de reasignación e intercambio con Hill Climbing y búsqueda tabú. El ganador de la pista curricular de ITC-2007 amplió ese planteamiento mediante cinco vecindarios coordinados con Hill Climbing, Great Deluge y recocido simulado \cite{muller2009itc}. Su fortaleza no procedía de un único operador, sino de alternar fases de intensificación y escape sin abandonar la factibilidad.
+
+El recocido simulado acepta mejoras y admite ciertos empeoramientos según la temperatura. Esa tolerancia evita que la búsqueda quede detenida en el primer óptimo local. Bellio et al. mostraron que un esquema sencillo podía ser competitivo si sus parámetros se relacionaban con características de cada instancia \cite{bellio2016feature}. Song et al. siguieron otra vía. Su búsqueda local con varios vecindarios ajusta las probabilidades de selección y reinicia desde la mejor de dos trayectorias de recocido \cite{song2021competition}. Ambos estudios muestran que la elección del movimiento y su frecuencia importan tanto como la regla de aceptación.
+
+VNS y VND cambian de vecindario de forma sistemática cuando una estructura deja de producir mejoras. Las hiperheurísticas trasladan esa decisión a un nivel superior y escogen entre operadores de bajo nivel. Estos enfoques reducen la dependencia de un movimiento concreto, aunque incorporan nuevas decisiones de control. Los métodos poblacionales aportan diversidad. Por ejemplo, Abdullah et al. combinaron un mecanismo inspirado en electromagnetismo con Great Deluge \cite{abdullah2012hybrid}. Su coste suele ser una evaluación más cara y un número mayor de parámetros. La revisión de Abdipoor et al. confirma que la hibridación se ha convertido en una línea dominante, pero también señala la dificultad de comparar configuraciones y presupuestos heterogéneos \cite{abdipoor2023meta}.
+
+\subsection{Métodos híbridos}
+
+La frontera entre metaheurística y método híbrido no es rígida. Un algoritmo memético aplica mejora local a individuos generados por una población. Una matheurística destruye parte del horario y delega la reparación en programación matemática o programación por restricciones. Kiefer et al. emplean ALNS con una reparación exacta basada en CPLEX \cite{kiefer2017adaptive}. El modelo resuelve con precisión el subproblema liberado y la búsqueda adaptativa decide qué parte conviene reconstruir. Esta combinación produce soluciones fuertes bajo los límites de ITC-2007, pero depende de un optimizador externo y de la escala del vecindario reparado.
+
+La utilidad práctica del híbrido está en repartir funciones. El componente exacto protege la factibilidad o explora un subespacio bien delimitado. La metaheurística mantiene la diversidad y recorre regiones alejadas. A cambio, aumenta la dificultad de atribuir las mejoras a un componente y de repetir el experimento cuando faltan licencias, código o parámetros.
+
+\subsection{Aprendizaje automático}
+
+El aprendizaje automático se usa sobre todo para decidir cómo resolver una instancia, no para construir por sí solo el horario final. De Coster et al. describen cada instancia mediante 256 características, delimitan regiones del espacio de problemas y entrenan selectores capaces de recomendar un algoritmo \cite{decoster2022algorithm}. El resultado es coherente con la ausencia de un ganador universal. Una técnica puede dominar en instancias densas y perder su ventaja cuando cambian el número de currículos, la ocupación o la disponibilidad.
+
+También se emplean modelos para predecir rendimiento, configurar parámetros y elegir operadores durante la búsqueda. Conviene distinguir estos usos de la configuración automática por carreras estadísticas. Ceschia et al. ajustan el algoritmo con \texttt{irace}, pero LectureKick sigue siendo una búsqueda local diseñada de forma explícita \cite{ceschia2026revisiting}. La ganancia procede de examinar sesgos y vecindarios, no de una red neuronal que aprenda a generar horarios.
+
+\section{LectureKick}
+
+La solución se representa mediante un vector con una entrada por clase. Cada entrada contiene un hueco formado por periodo y aula. La construcción inicial tiene tres etapas. Primero se asignan clases al azar respetando disponibilidad y ocupación. Después un Hill Climbing elimina los conflictos entre cursos. Una segunda fase de Hill Climbing incorpora las cuatro penalizaciones blandas y entrega al recocido simulado una solución factible de calidad razonable \cite{ceschia2026revisiting}.
+
+LectureKick extiende el movimiento LectureMove de Müller. Se selecciona una clase $l_1$ situada en $s_1$ y se propone el destino $s_2$. Si $s_2$ está libre, el movimiento termina con la reasignación de $l_1$. Si contiene una clase $l_2$, esta se traslada a un tercer hueco libre $s_3$. LectureMove solo permitía enviar $l_2$ al hueco liberado por $l_1$. La nueva libertad conecta más soluciones sin tener que introducir estados infactibles.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\columnwidth]{figures/lecturekick.pdf}
+  \caption{Movimiento LectureKick. La clase $l_1$ pasa de $s_1$ a $s_2$. Si $s_2$ contiene $l_2$, esta clase se desplaza a un hueco libre $s_3$. El movimiento se descarta cuando alguna reasignación viola disponibilidad, conflictos o unicidad de clase por periodo.}
+  \label{fig:lecturekick}
+\end{figure}
+
+Las precondiciones comprueban que los destinos sean distintos, que cada curso tenga como máximo una clase en el periodo elegido y que profesores y currículos permanezcan sin conflictos. También verifican la disponibilidad y la libertad de $s_3$. Por tanto, la fase principal del algoritmo explora únicamente horarios factibles.
+
+La selección no es uniforme. Un sesgo mueve clases de cursos que incumplen el mínimo de días hacia jornadas todavía vacías. Otro prioriza cursos presentes en muchos currículos para actuar sobre clases aisladas. El sesgo de estabilidad intenta reutilizar aulas ya asignadas al curso. La capacidad se trata de forma preventiva mediante aulas suficientes siempre que existan. Un último parámetro favorece que $l_2$ ocupe $s_1$, reproduciendo el intercambio del operador original. En la compilación \texttt{ENHANCED} el sesgo reactivo de capacidad queda desactivado y la preferencia por aulas adecuadas se aplica siempre que sea posible \cite{ceschia2026software}.
+
+El recocido utiliza temperatura inicial $5.394$, temperatura mínima $0.069$ y factor de enfriamiento $0.988$. En cada nivel corta el muestreo cuando la proporción de movimientos aceptados alcanza $0.133$. Los sesgos finales son $0.202$ para días mínimos, $0.122$ para cursos críticos, $0.146$ para estabilidad y $0.803$ para intercambios. El umbral de curso crítico es tres.
+
+\section{Protocolo de reproducción}
+
+Se fijó el commit \texttt{9cb3eb6} del repositorio de Ceschia et al. y el commit \texttt{b40b14c} de EasyLocal++ 3. La compilación usa GNU G++ 16.2, C++17, optimización \texttt{-O3}, Boost.Program\_options 1.92 y la macro \texttt{ENHANCED}. La campaña se ejecutó con MSYS2 UCRT64 sobre Windows 10. El artículo emplea Ubuntu 24.04 y GNU G++ 13.3. Esta diferencia impide comparar los tiempos de forma directa, aunque conserva el código, los parámetros y el número de iteraciones.
+
+El estudio incluye las 19 instancias disponibles en el directorio \texttt{instances/comp}. Se omiten \texttt{comp11}, cuyo coste cero no aporta discriminación, y \texttt{comp15}, equivalente a \texttt{comp03} bajo UD2. Cada instancia se ejecuta con las semillas 0, 1 y 2. El método es \texttt{BHC-KSA} y el límite \texttt{virtual\_timeout=192} convierte el tiempo de referencia en un número de iteraciones específico para cada instancia. El diseño suma 57 ejecuciones secuenciales ya completadas.
+
+Antes de iniciar la campaña se ejecutó dos veces \texttt{comp01} con semilla 0 y un límite reducido. Ambas pruebas produjeron coste 5, cero violaciones y el mismo horario. Cada ejecución definitiva conserva el horario, la salida estándar, el código de retorno, el coste, las violaciones, el tiempo declarado por el solver y el tiempo de pared. El archivo \texttt{results.csv} contiene una fila por pareja instancia y semilla. Una fila se acepta solo si el proceso termina correctamente, el coste puede analizarse y las violaciones duras son cero. Con tres semillas no se pretende reproducir la distribución de 30 repeticiones publicada. El objetivo es comprobar el artefacto y proporcionar una muestra trazable para la comparación posterior.
+
+\begin{table*}[t]
+\caption{Comparación crítica de las familias revisadas}
+\label{tab:familias}
+\centering
+\scriptsize
+\begin{tabularx}{\textwidth}{@{}lXXXX@{}}
+\toprule
+Familia & Calidad esperada & Coste temporal & Parámetros & Generalización \\
+\midrule
+Metaheurísticas & Alta con vecindarios y ajuste adecuados & Permiten devolver una solución en cualquier momento & Temperatura, enfriamiento, sesgos y reinicios & Sensibles a la estructura de la instancia \\
+Híbridos & Muy alta cuando la reparación exacta cubre un subproblema útil & Mayor coste por movimiento y posible dependencia de licencias & Tamaño de destrucción, reparación y control de la búsqueda & Buena si el modelo exacto conserva la formulación \\
+Aprendizaje automático & Indirecta, depende de los algoritmos candidatos & Añade entrenamiento, pero reduce decisiones durante la resolución & Características, modelo y conjunto de entrenamiento & Limitada fuera del espacio de instancias observado \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+\begin{table*}[t]
+\caption{Configuración reproducida de BHC-KSA}
+\label{tab:parametros}
+\centering
+\scriptsize
+\begin{tabularx}{\textwidth}{@{}lclX@{}}
+\toprule
+Parámetro & Valor & Componente & Función \\
+\midrule
+\texttt{mwd\_bias} & 0.202 & LectureKick & Favorece días todavía no usados por el curso \\
+\texttt{critical\_course\_bias} & 0.122 & LectureKick & Prioriza cursos presentes en varios currículos \\
+\texttt{critical\_course\_threshold} & 3 & LectureKick & Define cuándo un curso se considera crítico \\
+\texttt{stability\_bias} & 0.146 & LectureKick & Favorece aulas ya utilizadas por el curso \\
+\texttt{swap\_bias} & 0.803 & LectureKick & Favorece que la clase desplazada ocupe $s_1$ \\
+\texttt{start\_temperature} & 5.394 & Recocido & Controla la aceptación inicial de empeoramientos \\
+\texttt{min\_temperature} & 0.069 & Recocido & Establece el umbral de parada térmica \\
+\texttt{cooling\_rate} & 0.988 & Recocido & Reduce la temperatura después de cada nivel \\
+\texttt{neighbors\_accepted\_ratio} & 0.133 & Recocido & Corta el nivel al alcanzar la proporción aceptada \\
+\bottomrule
+\end{tabularx}
+\end{table*}

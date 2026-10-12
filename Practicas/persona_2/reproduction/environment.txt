@@ -1,0 +1,42 @@
+Entorno de reproducción
+=======================
+
+Estado: campaña completada el 5 de octubre de 2026
+
+Host
+----
+Sistema: Microsoft Windows 10 Pro 10.0.19045
+Procesador: Intel Core i7-9700F a 3.00 GHz
+Núcleos: 8 físicos y 8 lógicos
+Memoria: 15.9 GB
+
+Herramientas
+------------
+Entorno: MSYS2 UCRT64 instalado en una ruta ASCII de D:
+Compilador: GNU G++ 16.2.0, revisión 4 de MSYS2
+Estándar: C++17
+Opciones: -Wall -Wfatal-errors -Wno-deprecated-declarations -O3 -DENHANCED
+Boost: 1.92.0-3 para UCRT64
+
+Artefactos
+----------
+cb-ctt: 9cb3eb63040241fd1954ba49abcaba64461702f6
+EasyLocal++ 3: b40b14c2db2bdc81574a0613c52674644f8a0101
+
+Protocolo
+---------
+Método: BHC-KSA
+Instancias: comp01 a comp21, excepto comp11 y comp15
+Semillas: 0, 1 y 2
+Límite virtual: 192 segundos
+Ejecución: secuencial
+
+Resultados
+----------
+Ejecuciones registradas: 57
+Ejecuciones válidas: 57
+Violaciones duras: 0 en las 57 ejecuciones
+
+Diferencia respecto al artículo
+-------------------------------
+El artículo informa de Ubuntu 24.04 y GNU G++ 13.3. La campaña usa Windows 10, MSYS2 UCRT64 y GNU G++ 16.2. Por esta razón, los tiempos se documentan, pero no se tratan como una réplica exacta ni se comparan de forma directa con los del entorno de referencia.

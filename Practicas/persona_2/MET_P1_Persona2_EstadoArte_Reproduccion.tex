@@ -1,0 +1,42 @@
+\documentclass[conference,a4paper]{IEEEtran}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+\usepackage{etoolbox}
+
+\makeatletter
+\patchcmd{\abstract}{\textit{\abstractname}---}{\textit{\abstractname}.\ }{}{}
+\patchcmd{\IEEEkeywords}{\textit{\IEEEkeywordsname}---}{\textit{\IEEEkeywordsname}.\ }{}{}
+\makeatother
+
+\title{Estado del arte y reproducción de LectureKick para CB-CTT}
+
+\author{\IEEEauthorblockN{Alejandro}
+\IEEEauthorblockA{Máster Universitario en Aprendizaje Automático y Datos Masivos\\
+Universidad Politécnica de Madrid}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Este trabajo revisa las principales metaheurísticas, métodos híbridos y técnicas de aprendizaje automático aplicadas al problema de planificación universitaria basada en currículos. El estudio se centra después en LectureKick, un vecindario que amplía el movimiento LectureMove al permitir que una clase desplazada se reasigne a un tercer hueco. El operador se integra en un esquema de recocido simulado con sesgos dirigidos a las restricciones blandas de ITC-2007. Finalmente se define una reproducción trazable del código de Ceschia et al. sobre 19 instancias, tres semillas por instancia y un presupuesto calibrado de 192 segundos. Se registran versiones, comandos, soluciones y tiempos para facilitar la comparación posterior.
+\end{abstract}
+
+\begin{IEEEkeywords}
+CB-CTT, planificación universitaria, metaheurísticas, LectureKick, recocido simulado, reproducibilidad
+\end{IEEEkeywords}
+
+\input{persona2_section}
+
+\bibliographystyle{IEEEtran}
+\bibliography{persona2_references}
+\end{document}
