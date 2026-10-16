@@ -1,4 +1,17 @@
 # Local renderings and temporary verification artifacts
 tmp/
 output/rendered/
+output/review_current/
+output/pdf/*.log
+output/pdf/*.aux
+output/pdf/*.bbl
+output/pdf/*.blg
+output/pdf/*.out
+Practicas/persona_2/rendered/
+
+# Intermedios de compilación LaTeX
+**/*.aux
+**/*.bbl
+**/*.blg
+**/*.out
 

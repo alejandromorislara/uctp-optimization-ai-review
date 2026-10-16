@@ -1,91 +1,129 @@
-% Fragmento listo para \input en el artículo conjunto.
-% Requiere graphicx, booktabs y tabularx en el preámbulo principal.
-% La figura debe conservar la ruta figures/lecturekick.pdf.
-\section{Metaheurísticas, híbridos y aprendizaje}
+% Contribución de la Persona 2 para integrar en el artículo conjunto.
+% Requiere graphicx, booktabs, tabularx, array, float y placeins en el preámbulo.
 
-La planificación universitaria basada en currículos, conocida como CB-CTT, mantiene un espacio de búsqueda amplio incluso cuando la factibilidad se alcanza con rapidez. Esta diferencia explica el peso de las metaheurísticas en la literatura. Los métodos exactos pueden demostrar optimalidad o mejorar cotas con presupuestos largos, mientras que la búsqueda local concentra el tiempo disponible en obtener horarios de buena calidad. La comparación solo resulta informativa cuando la formulación, las instancias y el límite de ejecución coinciden \cite{ceschia2023educational}.
+\section{Estado del arte}
+\label{sec:estado-arte-p2}
+
+El problema de planificación universitaria basada en planes de estudio (Curriculum-Based Course Timetabling, CB-CTT) consiste en asignar cada clase a un periodo y un aula. El horario debe respetar las restricciones obligatorias y reducir las penalizaciones asociadas a las preferencias. Incluso después de obtener una solución factible, el número de alternativas posibles sigue siendo elevado, por lo que buena parte de la literatura recurre a metaheurísticas \cite{ceschia2023educational}.
 
 \subsection{Metaheurísticas}
 
-Los primeros trabajos sobre CB-CTT combinaron movimientos de reasignación e intercambio con Hill Climbing y búsqueda tabú. El ganador de la pista curricular de ITC-2007 amplió ese planteamiento mediante cinco vecindarios coordinados con Hill Climbing, Great Deluge y recocido simulado \cite{muller2009itc}. Su fortaleza no procedía de un único operador, sino de alternar fases de intensificación y escape sin abandonar la factibilidad.
+Los primeros trabajos sobre CB-CTT combinaron movimientos de reasignación e intercambio con Hill Climbing y búsqueda tabú. En la Segunda Competición Internacional de Horarios de 2007 (Second International Timetabling Competition, ITC-2007), el método de Müller obtuvo el mejor resultado en la modalidad dedicada a este problema. Su propuesta coordina cinco tipos de movimiento con Hill Climbing, Gran Diluvio (Great Deluge) y enfriamiento simulado \cite{muller2009itc}. Hill Climbing conserva los cambios que mejoran el horario, Great Deluge utiliza un umbral de aceptación que varía durante la búsqueda y el enfriamiento simulado permite aceptar algunos empeoramientos.
 
-El recocido simulado acepta mejoras y admite ciertos empeoramientos según la temperatura. Esa tolerancia evita que la búsqueda quede detenida en el primer óptimo local. Bellio et al. mostraron que un esquema sencillo podía ser competitivo si sus parámetros se relacionaban con características de cada instancia \cite{bellio2016feature}. Song et al. siguieron otra vía. Su búsqueda local con varios vecindarios ajusta las probabilidades de selección y reinicia desde la mejor de dos trayectorias de recocido \cite{song2021competition}. Ambos estudios muestran que la elección del movimiento y su frecuencia importan tanto como la regla de aceptación.
+En un problema de minimización, el enfriamiento simulado acepta siempre una mejora y admite un empeoramiento de magnitud $\Delta$ con probabilidad $\exp(-\Delta/T)$. La temperatura $T$ disminuye durante la ejecución. Al principio se aceptan más cambios desfavorables, lo que permite salir de un horario que parece bueno solo dentro de su entorno inmediato. Conforme baja la temperatura, esos cambios se vuelven menos probables y la búsqueda se concentra en reducir el coste. La Fig.~\ref{fig:sa-flow} resume este ciclo. En el problema estudiado, cada solución nueva es un horario vecino y la decisión de aceptarlo depende del cambio en la penalización y de la temperatura.
 
-VNS y VND cambian de vecindario de forma sistemática cuando una estructura deja de producir mejoras. Las hiperheurísticas trasladan esa decisión a un nivel superior y escogen entre operadores de bajo nivel. Estos enfoques reducen la dependencia de un movimiento concreto, aunque incorporan nuevas decisiones de control. Los métodos poblacionales aportan diversidad. Por ejemplo, Abdullah et al. combinaron un mecanismo inspirado en electromagnetismo con Great Deluge \cite{abdullah2012hybrid}. Su coste suele ser una evaluación más cara y un número mayor de parámetros. La revisión de Abdipoor et al. confirma que la hibridación se ha convertido en una línea dominante, pero también señala la dificultad de comparar configuraciones y presupuestos heterogéneos \cite{abdipoor2023meta}.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.76\columnwidth]{figures/paper/simulated_annealing_flow.png}
+  \caption{Ciclo general del enfriamiento simulado. Para CB-CTT, la nueva solución corresponde a un horario vecino y la temperatura regula la aceptación de los cambios que aumentan su penalización. Reproducido de la Fig.~1 de Ababei \cite{ababei2009fpga}.}
+  \label{fig:sa-flow}
+\end{figure}
+
+Bellio et al. aplicaron este esquema a CB-CTT y mostraron que la temperatura inicial influye de forma directa en la calidad final \cite{bellio2016feature}. Song et al. lo ampliaron con varios tipos de movimiento y ajustaron la frecuencia con la que se seleccionaba cada uno \cite{song2021competition}. Cuando existen varios movimientos, la búsqueda también debe decidir cuál aplicar en cada momento. La búsqueda de vecindario variable (Variable Neighborhood Search, VNS) cambia de vecindario cuando el actual deja de producir mejoras. El descenso por vecindarios variables (Variable Neighborhood Descent, VND) sigue una secuencia fijada de búsquedas locales. Las hiperheurísticas llevan esta decisión a un nivel superior y seleccionan el movimiento de bajo nivel que se aplicará a continuación.
+
+Otros métodos amplían la búsqueda manteniendo varios horarios a la vez. Abdullah et al. combinan una población de soluciones con un mecanismo inspirado en electromagnetismo y Great Deluge \cite{abdullah2012hybrid}. La incorporación de componentes con funciones diferentes conduce a los métodos híbridos, cuyo uso creciente en planificación universitaria recoge la revisión de Abdipoor et al. \cite{abdipoor2023meta}.
 
 \subsection{Métodos híbridos}
 
-La frontera entre metaheurística y método híbrido no es rígida. Un algoritmo memético aplica mejora local a individuos generados por una población. Una matheurística destruye parte del horario y delega la reparación en programación matemática o programación por restricciones. Kiefer et al. emplean ALNS con una reparación exacta basada en CPLEX \cite{kiefer2017adaptive}. El modelo resuelve con precisión el subproblema liberado y la búsqueda adaptativa decide qué parte conviene reconstruir. Esta combinación produce soluciones fuertes bajo los límites de ITC-2007, pero depende de un optimizador externo y de la escala del vecindario reparado.
+Los métodos híbridos combinan técnicas que intervienen en momentos distintos de la búsqueda. Un algoritmo memético, por ejemplo, genera varios horarios y aplica una búsqueda local para mejorar algunos de ellos. En una matheurística, el algoritmo retira temporalmente un conjunto de clases del horario y formula su recolocación como un problema matemático. Kiefer et al. siguen este segundo enfoque mediante una búsqueda adaptativa de gran vecindario (Adaptive Large Neighborhood Search, ALNS) \cite{kiefer2017adaptive}. La parte adaptativa elige qué clases conviene retirar según el rendimiento reciente de cada regla y el modelo exacto vuelve a asignarlas sin alterar el resto del horario. Así se exploran cambios amplios sin perder el control sobre las restricciones.
 
-La utilidad práctica del híbrido está en repartir funciones. El componente exacto protege la factibilidad o explora un subespacio bien delimitado. La metaheurística mantiene la diversidad y recorre regiones alejadas. A cambio, aumenta la dificultad de atribuir las mejoras a un componente y de repetir el experimento cuando faltan licencias, código o parámetros.
+Otra posibilidad consiste en combinar una población de horarios con una regla de aceptación propia de la búsqueda local. Abdullah et al. asignan a cada horario una fuerza calculada a partir de su penalización y emplean esa información para dirigir Great Deluge \cite{abdullah2012hybrid}. La Fig.~\ref{fig:hybrid} muestra el mecanismo sobre horarios concretos. Las soluciones con menor penalización atraen la búsqueda, las peores la alejan y la combinación produce un nuevo horario.
 
-\subsection{Aprendizaje automático}
-
-El aprendizaje automático se usa sobre todo para decidir cómo resolver una instancia, no para construir por sí solo el horario final. De Coster et al. describen cada instancia mediante 256 características, delimitan regiones del espacio de problemas y entrenan selectores capaces de recomendar un algoritmo \cite{decoster2022algorithm}. El resultado es coherente con la ausencia de un ganador universal. Una técnica puede dominar en instancias densas y perder su ventaja cuando cambian el número de currículos, la ocupación o la disponibilidad.
-
-También se emplean modelos para predecir rendimiento, configurar parámetros y elegir operadores durante la búsqueda. Conviene distinguir estos usos de la configuración automática por carreras estadísticas. Ceschia et al. ajustan el algoritmo con \texttt{irace}, pero LectureKick sigue siendo una búsqueda local diseñada de forma explícita \cite{ceschia2026revisiting}. La ganancia procede de examinar sesgos y vecindarios, no de una red neuronal que aprenda a generar horarios.
-
-\section{LectureKick}
-
-La solución se representa mediante un vector con una entrada por clase. Cada entrada contiene un hueco formado por periodo y aula. La construcción inicial tiene tres etapas. Primero se asignan clases al azar respetando disponibilidad y ocupación. Después un Hill Climbing elimina los conflictos entre cursos. Una segunda fase de Hill Climbing incorpora las cuatro penalizaciones blandas y entrega al recocido simulado una solución factible de calidad razonable \cite{ceschia2026revisiting}.
-
-LectureKick extiende el movimiento LectureMove de Müller. Se selecciona una clase $l_1$ situada en $s_1$ y se propone el destino $s_2$. Si $s_2$ está libre, el movimiento termina con la reasignación de $l_1$. Si contiene una clase $l_2$, esta se traslada a un tercer hueco libre $s_3$. LectureMove solo permitía enviar $l_2$ al hueco liberado por $l_1$. La nueva libertad conecta más soluciones sin tener que introducir estados infactibles.
-
-\begin{figure}[t]
+\begin{figure}[H]
   \centering
-  \includegraphics[width=\columnwidth]{figures/lecturekick.pdf}
-  \caption{Movimiento LectureKick. La clase $l_1$ pasa de $s_1$ a $s_2$. Si $s_2$ contiene $l_2$, esta clase se desplaza a un hueco libre $s_3$. El movimiento se descarta cuando alguna reasignación viola disponibilidad, conflictos o unicidad de clase por periodo.}
+  \includegraphics[width=0.98\columnwidth]{figures/paper/hybrid_attract_repel.png}
+  \caption{Ejemplo del componente de atracción y repulsión del método híbrido de Abdullah et al. Los horarios con penalizaciones 210 y 165 modifican la búsqueda iniciada desde el horario con penalización 170, que conduce a una nueva solución con penalización 163. Reproducido de la Fig.~2 de Abdullah et al. \cite{abdullah2012hybrid}.}
+  \label{fig:hybrid}
+\end{figure}
+
+\subsection{Nuevas líneas de investigación}
+
+Una línea reciente estudia cómo adaptar el algoritmo a cada instancia antes de comenzar la búsqueda. De Coster et al. describen cada problema mediante 256 características y entrenan selectores que recomiendan el algoritmo más apropiado para cada región del espacio de instancias \cite{decoster2022algorithm}. Este planteamiento desplaza la pregunta desde qué método es mejor en promedio hacia qué método conviene utilizar ante una estructura concreta de conflictos, aulas y disponibilidad.
+
+El paso siguiente sería trasladar esa adaptación a la propia búsqueda. En lugar de mantener fijas las probabilidades de los movimientos, el algoritmo podría actualizarlas según su rendimiento reciente. También queda por estudiar si un selector entrenado con los horarios de una universidad conserva su utilidad cuando cambian las restricciones y la estructura de los planes de estudio.
+
+En el método que se reproduce, Hill Climbing obtiene un horario factible y el enfriamiento simulado decide si acepta cada modificación. LectureKick es la regla que construye esa modificación respetando las restricciones del horario. Por eso el vecindario conecta la estrategia de aceptación con la estructura concreta de CB-CTT.
+
+\section{El vecindario LectureKick}
+\label{sec:lecturekick}
+
+LectureKick es la regla de vecindario con la que el algoritmo genera el siguiente horario. Ceschia et al. la aplican después de una inicialización mediante Hill Climbing y dentro de una fase de enfriamiento simulado \cite{ceschia2026revisiting}. La regla reubica una o dos clases sin incumplir las restricciones obligatorias. Antes de aplicarla, el programa construye un horario factible y calcula las cuatro penalizaciones blandas del problema.
+
+Cada clase ocupa un hueco definido por un periodo y un aula. En la notación de la Fig.~\ref{fig:lecturekick}, $l_i$ identifica una clase, $c_i$ indica el curso al que pertenece esa clase y $s_i$ representa un hueco del horario. Por ejemplo, $l_2\!:\!c_2$ significa que la segunda clase pertenece al curso $c_2$. LectureKick parte de $l_1$ situada en $s_1$ y propone trasladarla a $s_2$. Si el destino está libre, basta con mover $l_1$. Cuando $s_2$ contiene otra clase $l_2$, LectureMove solo permite enviarla al hueco liberado $s_1$. LectureKick añade la posibilidad de colocar $l_2$ en cualquier hueco libre $s_3$. De este modo puede alcanzar horarios que no están disponibles mediante un intercambio directo.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\columnwidth]{figures/paper/gr1_lrg.jpg}
+  \caption{Movimiento LectureKick. El símbolo $l_i$ identifica una clase, $c_i$ su curso y $s_i$ un hueco formado por periodo y aula. La clase $l_1$ pasa de $s_1$ a $s_2$ y, si el destino está ocupado, $l_2$ puede reubicarse en $s_3$. Reproducido de la Fig.~1 de Ceschia et al. \cite{ceschia2026revisiting}.}
   \label{fig:lecturekick}
 \end{figure}
 
-Las precondiciones comprueban que los destinos sean distintos, que cada curso tenga como máximo una clase en el periodo elegido y que profesores y currículos permanezcan sin conflictos. También verifican la disponibilidad y la libertad de $s_3$. Por tanto, la fase principal del algoritmo explora únicamente horarios factibles.
+Los destinos deben ser distintos, los periodos deben estar disponibles y las clases implicadas no pueden presentar conflictos. Cuando se utiliza $s_3$, ese hueco debe permanecer libre. Estas condiciones hacen que la regla trabaje únicamente con horarios factibles.
 
-La selección no es uniforme. Un sesgo mueve clases de cursos que incumplen el mínimo de días hacia jornadas todavía vacías. Otro prioriza cursos presentes en muchos currículos para actuar sobre clases aisladas. El sesgo de estabilidad intenta reutilizar aulas ya asignadas al curso. La capacidad se trata de forma preventiva mediante aulas suficientes siempre que existan. Un último parámetro favorece que $l_2$ ocupe $s_1$, reproduciendo el intercambio del operador original. En la compilación \texttt{ENHANCED} el sesgo reactivo de capacidad queda desactivado y la preferencia por aulas adecuadas se aplica siempre que sea posible \cite{ceschia2026software}.
+La elección de los movimientos tampoco es uniforme. Un sesgo favorece las clases que todavía no alcanzan el mínimo de días y otro da prioridad a los cursos con riesgo de generar clases aisladas. El algoritmo también prefiere aulas ya utilizadas por el mismo curso y aulas con capacidad suficiente. Un último sesgo aumenta la frecuencia de los intercambios propios de LectureMove. La Fig.~\ref{fig:sesgos} reproduce los ejemplos con los que los autores explican estas seis decisiones.
 
-El recocido utiliza temperatura inicial $5.394$, temperatura mínima $0.069$ y factor de enfriamiento $0.988$. En cada nivel corta el muestreo cuando la proporción de movimientos aceptados alcanza $0.133$. Los sesgos finales son $0.202$ para días mínimos, $0.122$ para cursos críticos, $0.146$ para estabilidad y $0.803$ para intercambios. El umbral de curso crítico es tres.
+\begin{figure}[!t]
+\centering
+\begin{minipage}{0.48\columnwidth}\centering
+\includegraphics[width=\linewidth]{figures/paper/gr2a_lrg.jpg}\\[-1mm]
+\scriptsize (a) Días mínimos
+\end{minipage}\hfill
+\begin{minipage}{0.48\columnwidth}\centering
+\includegraphics[width=\linewidth]{figures/paper/gr2b_lrg.jpg}\\[-1mm]
+\scriptsize (b) Clases aisladas
+\end{minipage}
 
-\section{Protocolo de reproducción}
+\vspace{1mm}
+\begin{minipage}{0.48\columnwidth}\centering
+\includegraphics[width=\linewidth]{figures/paper/gr2c_lrg.jpg}\\[-1mm]
+\scriptsize (c) Capacidad del aula
+\end{minipage}\hfill
+\begin{minipage}{0.48\columnwidth}\centering
+\includegraphics[width=\linewidth]{figures/paper/gr2d_lrg.jpg}\\[-1mm]
+\scriptsize (d) Estabilidad del aula
+\end{minipage}\hfill
 
-Se fijó el commit \texttt{9cb3eb6} del repositorio de Ceschia et al. y el commit \texttt{b40b14c} de EasyLocal++ 3. La compilación usa GNU G++ 16.2, C++17, optimización \texttt{-O3}, Boost.Program\_options 1.92 y la macro \texttt{ENHANCED}. La campaña se ejecutó con MSYS2 UCRT64 sobre Windows 10. El artículo emplea Ubuntu 24.04 y GNU G++ 13.3. Esta diferencia impide comparar los tiempos de forma directa, aunque conserva el código, los parámetros y el número de iteraciones.
+\vspace{1mm}
+\begin{minipage}{0.48\columnwidth}\centering
+\includegraphics[width=\linewidth]{figures/paper/gr2e_lrg.jpg}\\[-1mm]
+\scriptsize (e) Prevención de capacidad
+\end{minipage}\hfill
+\begin{minipage}{0.48\columnwidth}\centering
+\includegraphics[width=\linewidth]{figures/paper/gr2f_lrg.jpg}\\[-1mm]
+\scriptsize (f) Preferencia de intercambio
+\end{minipage}
+\caption{Ejemplos de los seis sesgos de selección empleados con LectureKick. Los cuatro primeros actúan sobre penalizaciones blandas. Los otros dos evitan una penalización de capacidad y favorecen los intercambios. Reproducido de la Fig.~2 de Ceschia et al. \cite{ceschia2026revisiting}.}
+\label{fig:sesgos}
+\end{figure}
+\FloatBarrier
 
-El estudio incluye las 19 instancias disponibles en el directorio \texttt{instances/comp}. Se omiten \texttt{comp11}, cuyo coste cero no aporta discriminación, y \texttt{comp15}, equivalente a \texttt{comp03} bajo UD2. Cada instancia se ejecuta con las semillas 0, 1 y 2. El método es \texttt{BHC-KSA} y el límite \texttt{virtual\_timeout=192} convierte el tiempo de referencia en un número de iteraciones específico para cada instancia. El diseño suma 57 ejecuciones secuenciales ya completadas.
+Ceschia et al. no fijaron estos parámetros manualmente. Antes de los experimentos finales usaron \texttt{irace}. El programa prueba varias combinaciones en un conjunto de instancias y descarta las que funcionan peor. Después repite la comparación con las restantes hasta escoger una configuración. El proceso se aplica a la temperatura, al enfriamiento y a las probabilidades de los seis sesgos \cite{ceschia2026revisiting,lopezibanez2016irace}. Una vez elegidos, esos valores permanecen fijos durante LectureKick.
 
-Antes de iniciar la campaña se ejecutó dos veces \texttt{comp01} con semilla 0 y un límite reducido. Ambas pruebas produjeron coste 5, cero violaciones y el mismo horario. Cada ejecución definitiva conserva el horario, la salida estándar, el código de retorno, el coste, las violaciones, el tiempo declarado por el solver y el tiempo de pared. El archivo \texttt{results.csv} contiene una fila por pareja instancia y semilla. Una fila se acepta solo si el proceso termina correctamente, el coste puede analizarse y las violaciones duras son cero. Con tres semillas no se pretende reproducir la distribución de 30 repeticiones publicada. El objetivo es comprobar el artefacto y proporcionar una muestra trazable para la comparación posterior.
+\section{Metodología de reproducción}
+\label{sec:reproduccion}
 
-\begin{table*}[t]
-\caption{Comparación crítica de las familias revisadas}
-\label{tab:familias}
+Se ejecutó el programa publicado por Ceschia et al. con la configuración utilizada en el artículo \cite{ceschia2026revisiting}. El proceso comienza con Hill Climbing para obtener un horario factible y continúa con el enfriamiento simulado, que utiliza LectureKick para generar horarios vecinos.
+
+\subsection{Diseño experimental}
+
+Se seleccionaron las 19 instancias no redundantes de la formulación UD2 de ITC-2007. Se omitió \texttt{comp11} porque su coste objetivo es nulo y \texttt{comp15} porque equivale a \texttt{comp03} bajo esta formulación. Cada instancia se ejecutó tres veces con semillas distintas, lo que dio lugar a 57 ejecuciones. El programa convirtió el límite virtual de 192 segundos en un presupuesto de búsqueda específico para cada instancia.
+
+En cada ejecución, el programa construyó primero un horario y aplicó Hill Climbing hasta alcanzar una solución factible. Después utilizó el enfriamiento simulado con LectureKick hasta agotar el presupuesto asignado. Al finalizar se comprobó que no hubiera violaciones obligatorias y se registraron la penalización final y el tiempo. Con estas comprobaciones se puede verificar la ejecución del método y dejar preparados los datos para el análisis y la comparación posterior de resultados.
+
+Por limitaciones computacionales, la reproducción emplea tres semillas por instancia frente a las 30 del artículo y se ejecuta en un entorno diferente, por lo que permite comprobar el procedimiento y la factibilidad, pero los tiempos solo son orientativos. La Tabla~\ref{tab:entorno} resume las diferencias técnicas \cite{boulesteix2019benchmarking}.
+
+\begin{table}[H]
+\caption{Diferencias técnicas entre las ejecuciones}
+\label{tab:entorno}
 \centering
 \scriptsize
-\begin{tabularx}{\textwidth}{@{}lXXXX@{}}
+\begin{tabular}{@{}lll@{}}
 \toprule
-Familia & Calidad esperada & Coste temporal & Parámetros & Generalización \\
+Aspecto & Artículo & Reproducción \\
 \midrule
-Metaheurísticas & Alta con vecindarios y ajuste adecuados & Permiten devolver una solución en cualquier momento & Temperatura, enfriamiento, sesgos y reinicios & Sensibles a la estructura de la instancia \\
-Híbridos & Muy alta cuando la reparación exacta cubre un subproblema útil & Mayor coste por movimiento y posible dependencia de licencias & Tamaño de destrucción, reparación y control de la búsqueda & Buena si el modelo exacto conserva la formulación \\
-Aprendizaje automático & Indirecta, depende de los algoritmos candidatos & Añade entrenamiento, pero reduce decisiones durante la resolución & Características, modelo y conjunto de entrenamiento & Limitada fuera del espacio de instancias observado \\
+CPU & No indicado & i7-9700F (8 núcleos) \\
+SO & Ubuntu 24.04 & Windows 10 Pro \\
+Compilador & G++ 13.3 & G++ 16.2 / UCRT64 \\
 \bottomrule
-\end{tabularx}
-\end{table*}
-
-\begin{table*}[t]
-\caption{Configuración reproducida de BHC-KSA}
-\label{tab:parametros}
-\centering
-\scriptsize
-\begin{tabularx}{\textwidth}{@{}lclX@{}}
-\toprule
-Parámetro & Valor & Componente & Función \\
-\midrule
-\texttt{mwd\_bias} & 0.202 & LectureKick & Favorece días todavía no usados por el curso \\
-\texttt{critical\_course\_bias} & 0.122 & LectureKick & Prioriza cursos presentes en varios currículos \\
-\texttt{critical\_course\_threshold} & 3 & LectureKick & Define cuándo un curso se considera crítico \\
-\texttt{stability\_bias} & 0.146 & LectureKick & Favorece aulas ya utilizadas por el curso \\
-\texttt{swap\_bias} & 0.803 & LectureKick & Favorece que la clase desplazada ocupe $s_1$ \\
-\texttt{start\_temperature} & 5.394 & Recocido & Controla la aceptación inicial de empeoramientos \\
-\texttt{min\_temperature} & 0.069 & Recocido & Establece el umbral de parada térmica \\
-\texttt{cooling\_rate} & 0.988 & Recocido & Reduce la temperatura después de cada nivel \\
-\texttt{neighbors\_accepted\_ratio} & 0.133 & Recocido & Corta el nivel al alcanzar la proporción aceptada \\
-\bottomrule
-\end{tabularx}
-\end{table*}
+\end{tabular}
+\end{table}
