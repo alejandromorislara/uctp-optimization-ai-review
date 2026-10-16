@@ -17,6 +17,19 @@ Practicas/cuestionario_proyecto/
 Teoria/
 vc140.pdb
 
+# Versiones antiguas o alternativas de la entrega
+Practicas/MET_Block_I_Research_Proposal.pdf
+Practicas/persona_2/MET_P1_Persona2_EstadoArte_Reproduccion.pdf
+Practicas/persona_2/MET_P1_Persona2_EstadoArte_Reproduccion.log
+Practicas/persona_2/poster/
+Practicas/poster_sota/
+Practicas/proposal_sota/
+Practicas/propuesta_sota/
+output/pdf/MET_Block_I_Research_Proposal_SOTA.pdf
+output/pdf/MET_Block_I_Research_Proposal_SOTA_ES.pdf
+output/pdf/MET_P1_Poster_SOTA.pdf
+output/pdf/MET_P1_Propuesta_SOTA.pdf
+
 # Intermedios de compilación LaTeX
 **/*.aux
 **/*.bbl
