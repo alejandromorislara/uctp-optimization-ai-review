@@ -9,6 +9,14 @@ output/pdf/*.blg
 output/pdf/*.out
 Practicas/persona_2/rendered/
 
+# Materiales locales ajenos al Bloque 1
+Documentacion/GA_61AH_613000136_ES_2026-27.pdf
+Documentacion/Tema_6_Financiacion/
+Practicas/Ejercicios-Tema1.pdf
+Practicas/cuestionario_proyecto/
+Teoria/
+vc140.pdb
+
 # Intermedios de compilación LaTeX
 **/*.aux
 **/*.bbl
