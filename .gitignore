@@ -48,6 +48,9 @@ Practicas/persona_2/figures/source/*
 !Practicas/persona_2/figures/source/abdullah_hybrid.pdf
 !Practicas/persona_2/figures/source/bellio_sa.pdf
 
+# Salidas temporales de campañas de reproducción
+Practicas/persona_2/reproduction/campaign_*.log
+
 # Intermedios de compilación LaTeX
 **/*.aux
 **/*.bbl
