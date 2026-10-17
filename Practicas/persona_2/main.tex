@@ -102,7 +102,7 @@ La función objetivo de ITC-2019 combina penalizaciones de tiempo, aula, distrib
 
 \subsubsection{Programación entera y descomposición}
 
-La programación lineal entera mixta (MIP o MILP) modela las asignaciones mediante variables binarias y expresa las restricciones como relaciones algebraicas. La búsqueda por ramificación y acotación, reforzada con cortes válidos, puede generar horarios y cotas inferiores \cite{ref3}. En un problema de minimización, un horario factible fija una cota superior, mientras que la cota inferior marca un valor que el óptimo no puede rebasar por abajo. Si ambas coinciden, se certifica la optimalidad. Cuando el tiempo se agota antes, la mejor solución encontrada debe describirse como factible, no como óptima.
+La programación lineal entera mixta (MIP o MILP) modela las asignaciones mediante variables binarias y expresa las restricciones como relaciones algebraicas. La búsqueda por ramificación y acotación, reforzada con cortes válidos, puede generar horarios y cotas inferiores \cite{ref3}. En un problema de minimización, un horario factible fija una cota superior y la cota inferior marca un valor por debajo del cual no puede situarse el óptimo. Cuando ambas cotas coinciden se alcanza la optimalidad, mientras que, si el tiempo se agota antes, la mejor solución encontrada se mantiene como una solución factible.
 
 
 La formulación también condiciona el rendimiento. Bagger, Kristiansen, Sørensen y Stidsen \cite{ref6} conectan la planificación temporal y la asignación de aulas mediante modelos de flujo. En sus experimentos, la cota superior media de esta formulación supera a la de las alternativas MIP comparadas, aunque el resultado se limita a ese conjunto de instancias y no establece una ventaja general para todas las familias de algoritmos.
@@ -168,10 +168,10 @@ Una línea reciente adapta el algoritmo a cada instancia y combina construcción
 
 \section{El vecindario LectureKick}
 
-LectureKick es la regla de vecindario con la que el algoritmo genera el siguiente horario. Ceschia et al. la aplican después de una inicialización mediante Hill Climbing y dentro de una fase de enfriamiento simulado \cite{ref18}. La regla reubica una o dos clases sin incumplir las restricciones obligatorias. Antes de aplicarla, el programa construye un horario factible y calcula las cuatro penalizaciones blandas del problema.
+LectureKick es la regla de vecindario con la que el algoritmo genera el siguiente horario. Ceschia et al. la aplican después de una inicialización mediante Hill Climbing y dentro de una fase de enfriamiento simulado \cite{ref18}, donde reubica una o dos clases sin incumplir las restricciones obligatorias. Para entender el movimiento, el programa parte de un horario factible y de las cuatro penalizaciones blandas del problema.
 
 
-Cada clase ocupa un hueco definido por un periodo y un aula. En la notación de la Fig.~\ref{fig:lecturekick}, $l_i$ identifica una clase, $c_i$ indica el curso al que pertenece y $s_i$ representa un hueco del horario. Por ejemplo, $l_2$:$c_2$ significa que la segunda clase pertenece al curso $c_2$. LectureKick parte de $l_1$ situada en $s_1$ y propone trasladarla a $s_2$. Si el destino está libre, basta con mover $l_1$. Cuando $s_2$ contiene otra clase $l_2$, LectureMove solo permite enviarla al hueco liberado $s_1$. LectureKick añade la posibilidad de colocar $l_2$ en cualquier hueco libre $s_3$. De este modo puede alcanzar horarios que no están disponibles mediante un intercambio directo.
+Cada clase ocupa un hueco definido por un periodo y un aula. En la notación de la Fig.~\ref{fig:lecturekick}, $l_i$ identifica una clase, $c_i$ el curso al que pertenece y $s_i$ un hueco del horario. Así, $l_2$:$c_2$ indica que la segunda clase pertenece al curso $c_2$. LectureKick propone trasladar $l_1$ desde $s_1$ hasta $s_2$. Si $s_2$ está libre, el movimiento termina ahí. Si contiene otra clase $l_2$, LectureMove solo puede enviarla al hueco que deja libre $s_1$, mientras que LectureKick también permite colocarla en cualquier hueco libre $s_3$. Esta diferencia amplía el vecindario sin abandonar la factibilidad.
 
 
 \begin{figure}[!t]
@@ -204,10 +204,10 @@ Se ejecutó el programa publicado por Ceschia et al. con la configuración utili
 
 \subsection{Diseño experimental}
 
-Se seleccionaron las 19 instancias no redundantes de la formulación UD2 de ITC-2007. Se omitió comp11 porque su coste objetivo es nulo y comp15 porque equivale a comp03 bajo esta formulación. Cada instancia se ejecutó tres veces con semillas distintas, lo que dio lugar a 57 ejecuciones. El programa convirtió el límite virtual de 192 segundos en un presupuesto de búsqueda específico para cada instancia. Este límite sirve para fijar el esfuerzo de búsqueda y no representa una medición directa del tiempo de ejecución.
+Se seleccionaron las 19 instancias no redundantes de la formulación UD2 de ITC-2007. Se omitió comp11 porque su coste objetivo es nulo y comp15 porque equivale a comp03 bajo esta formulación. Cada instancia se ejecutó tres veces con semillas distintas, lo que dio lugar a 57 ejecuciones. El programa convirtió el límite virtual de 192 segundos en un presupuesto de búsqueda específico para cada instancia.
 
 
-En cada ejecución, el programa construyó primero un horario y aplicó Hill Climbing hasta alcanzar una solución factible. Después utilizó enfriamiento simulado con LectureKick hasta agotar el presupuesto asignado. Al finalizar se verificaron el código de salida, el coste numérico y la factibilidad del horario.
+A continuación se aplicó el presupuesto de búsqueda asignado al enfriamiento simulado con LectureKick. Al finalizar se verificaron el código de salida, el coste numérico y la factibilidad del horario.
 
 
 Por limitaciones computacionales, la reproducción emplea tres semillas por instancia frente a las 30 ejecuciones independientes del artículo y se ejecuta en un entorno diferente. En consecuencia, permite comprobar el procedimiento, la factibilidad y la estabilidad básica de la ejecución, pero no reproducir con la misma potencia estadística las medias y desviaciones publicadas. La Tabla~\ref{tab:entorno} resume las diferencias técnicas \cite{ref18}, \cite{ref20}.
