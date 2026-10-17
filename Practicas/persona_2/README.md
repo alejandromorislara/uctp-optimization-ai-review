@@ -1,4 +1,4 @@
-# Artículo LaTeX IEEE — CB-CTT
+# Artículo LaTeX IEEE - CB-CTT
 
 Archivo principal: `main.tex`.
 

@@ -1,4 +1,4 @@
-# Bloque I — Planificación de Horarios Universitarios
+# Bloque I - Planificación de Horarios Universitarios
 
 Material vigente del Bloque I sobre optimización e inteligencia artificial aplicadas a la planificación de horarios universitarios. El documento combina una revisión del estado del arte con la reproducción del solver LectureKick sobre CB-CTT.
 
