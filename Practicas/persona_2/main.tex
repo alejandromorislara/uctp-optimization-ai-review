@@ -12,6 +12,7 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{microtype}
 \usepackage{balance}
+\addto\captionsspanish{\renewcommand{\tablename}{Tabla}}
 \interdisplaylinepenalty=2500
 \graphicspath{{figures/}}
 \hyphenation{time-tabling curri-cu-lum Lecture-Kick}
@@ -26,43 +27,37 @@
 
 \selectlanguage{spanish}
 
-\begin{center}\begin{minipage}{\columnwidth}\small\textbf{Resumen---} La planificación de horarios universitarios constituye un problema de optimización combinatoria en el que deben asignarse sesiones docentes a periodos y aulas satisfaciendo restricciones obligatorias y minimizando criterios de calidad. Este trabajo presenta una revisión del estado del arte del Curriculum-Based Course Timetabling Problem (CB-CTT) durante 2015--2026, complementada con un estudio experimental de reproducibilidad sobre la formulación UD2 de ITC-2007. El corpus analizado contiene 25 estudios primarios y cubre métodos exactos y declarativos, metaheurísticas, enfoques híbridos, hiperheurísticas y técnicas de selección y configuración automática de algoritmos. En este corpus, ITC-2007 aparece explícitamente en el 64\% de los estudios y el aprendizaje automático se utiliza principalmente como apoyo para seleccionar, caracterizar o configurar métodos de optimización. Para evaluar la reproducibilidad se ejecutó BHC-KSA con el vecindario LectureKick de Ceschia et al. sobre 19 instancias no redundantes de ITC-2007 UD2, con tres semillas por instancia y 57 ejecuciones en total. Todas produjeron horarios factibles sin violaciones duras. La reproducción se contrasta funcionalmente con el protocolo del artículo de 2026 y, de forma separada, su competitividad se mide frente a los mejores valores conocidos de la literatura: el mejor coste reproducido igualó ese best-known en dos instancias. Las diferencias se interpretan considerando el menor número de repeticiones y el cambio de entorno computacional. En el corpus analizado, los datos de benchmark son mayoritariamente públicos, pero el código y las configuraciones completas son mucho menos frecuentes.\par\vspace{0.35em}\textbf{Palabras clave---} planificación de horarios universitarios, CB-CTT, ITC-2007, metaheurísticas, optimización combinatoria, reproducibilidad, LectureKick.\end{minipage}\end{center}
+\begin{center}\begin{minipage}{\columnwidth}\small\textbf{Resumen:} La planificación de horarios universitarios asigna sesiones docentes a periodos y aulas bajo restricciones obligatorias y criterios de calidad. Este trabajo revisa los métodos publicados entre 2015 y 2026 para el problema de planificación basado en grupos de asignaturas (CB-CTT) y estudia la reproducibilidad de un método reciente sobre 19 instancias de la tercera modalidad de la International Timetabling Competition 2007 (ITC-2007). La revisión reúne 25 estudios y compara métodos exactos, metaheurísticas, enfoques híbridos, hiperheurísticas y técnicas de selección automática. La reproducción se ejecutó con una búsqueda local que combina enfriamiento simulado y el vecindario LectureKick, con tres semillas por instancia. Los resultados permiten comprobar el funcionamiento del método y valorar sus diferencias respecto al estudio original. La revisión también registra cómo se publican los datos, el código y las configuraciones experimentales.\par\vspace{0.35em}\textbf{Palabras clave:} planificación de horarios universitarios, CB-CTT, ITC-2007, metaheurísticas, optimización combinatoria, reproducibilidad, LectureKick.\end{minipage}\end{center}
 
 \selectlanguage{english}
 
-\begin{abstract}
-University course timetabling is a combinatorial optimization problem in which teaching activities must be assigned to time periods and rooms while satisfying mandatory constraints and minimizing quality penalties. This paper presents a state-of-the-art review of the Curriculum-Based Course Timetabling Problem (CB-CTT) covering 2015--2026, complemented by an experimental reproducibility study using the ITC-2007 UD2 formulation. The analyzed corpus contains 25 primary studies covering exact and declarative methods, metaheuristics, hybrid approaches, hyper-heuristics, and algorithm selection and automatic configuration techniques. Within this corpus, ITC-2007 is explicitly used in 64\% of the studies, while machine learning is mainly employed to support algorithm selection, instance characterization, and solver configuration. Reproducibility was evaluated using BHC-KSA with the LectureKick neighborhood proposed by Ceschia et al. on 19 non-redundant ITC-2007 UD2 instances, with three random seeds per instance and 57 runs in total. All runs produced feasible timetables with no hard-constraint violations. The reproduction is assessed functionally against the 2026 paper protocol, while competitiveness is evaluated separately against literature best-known values: the best reproduced cost matched that best-known value on two instances. Differences are interpreted in light of the reduced number of repetitions and the different computational environment. In the analyzed corpus, benchmark data are mostly public, whereas source code and complete experimental configurations are far less common.
-\end{abstract}
-
-\begin{IEEEkeywords}
-university course timetabling, CB-CTT, ITC-2007, metaheuristics, combinatorial optimization, reproducibility, LectureKick.
-\end{IEEEkeywords}
+\begin{center}\begin{minipage}{\columnwidth}\small\textbf{Abstract:} University course timetabling assigns teaching activities to periods and rooms while satisfying mandatory constraints and minimizing quality penalties. This paper reviews methods published between 2015 and 2026 for the Curriculum-Based Course Timetabling Problem (CB-CTT) and studies the reproducibility of a recent method on 19 instances from the third track of the International Timetabling Competition 2007 (ITC-2007). The review covers 25 studies and compares exact methods, metaheuristics, hybrid approaches, hyper-heuristics, and automatic algorithm selection. Reproducibility was assessed using a local search that combines simulated annealing with the LectureKick neighborhood and three random seeds per instance. The resulting executions allow the method and its experimental protocol to be checked against the original study. The review also records how benchmark data, source code, and experimental configurations are reported.\par\vspace{0.35em}\textbf{Index Terms:} university course timetabling, CB-CTT, ITC-2007, metaheuristics, combinatorial optimization, reproducibility, LectureKick.\end{minipage}\end{center}
 
 \selectlanguage{spanish}
 
 \section{Problema de investigación}
 
-La planificación de horarios universitarios exige coordinar sesiones docentes, profesorado y aulas. La dificultad consiste en encontrar una asignación compatible con los recursos disponibles y con criterios de calidad docente. Este trabajo estudia el Curriculum-Based Course Timetabling (CB-CTT), en particular la formulación UD2 utilizada en el tercer track de ITC-2007, y combina una revisión crítica de métodos y benchmarks con la reproducción de un artefacto reciente de búsqueda local.
+La planificación de horarios universitarios exige coordinar sesiones docentes, profesorado y aulas. La dificultad consiste en encontrar una asignación compatible con los recursos disponibles y con criterios de calidad docente. Este trabajo estudia el problema de planificación basado en grupos de asignaturas (CB-CTT). La reproducción se centra en la formulación UD2, utilizada en la tercera modalidad de la International Timetabling Competition 2007 (ITC-2007). En este trabajo, UD2 designa la formulación concreta de esa modalidad. El artículo combina una revisión de métodos con la reproducción de un método reciente de búsqueda local.
 
 
-En CB-CTT se asigna un periodo y un aula a cada sesión de una semana lectiva. Un currículo agrupa asignaturas que comparten alumnado; por ello, sus sesiones no deben coincidir. Las restricciones duras exigen programar todas las sesiones en periodos distintos para cada asignatura, impedir coincidencias de aula, profesor o currículo y respetar las indisponibilidades. Un horario es factible cuando satisface todas ellas \cite{ref1}.
+En CB-CTT se asigna un periodo y un aula a cada sesión de una semana lectiva. Un grupo de asignaturas comparte parte del alumnado, por lo que sus sesiones no deben coincidir. Las restricciones duras exigen programar todas las sesiones en periodos distintos para cada asignatura, evitar coincidencias de aula, profesor o grupo de asignaturas y respetar las indisponibilidades. Un horario es factible cuando satisface todas ellas \cite{ref1}.
 
 
 La calidad de los horarios factibles se evalúa mediante la suma ponderada de cuatro penalizaciones. En UD2, la capacidad del aula es una restricción blanda: superar sus plazas aumenta el coste, pero no invalida por sí solo el horario \cite{ref1}.
 
 
 \begin{table}[!b]
-\caption{Penalizaciones de ITC-2007 Track 3. Fuente: \cite{ref1}.}
+\caption{Penalizaciones de la tercera modalidad de ITC-2007. Fuente: \cite{ref1}.}
 \label{tab:penalizaciones}
 \centering
 \footnotesize
 \begin{tabular}{p{0.29\columnwidth} p{0.58\columnwidth}}
 \toprule
-\textbf{Criterio} & \textbf{Penalización en UD2}\\
+\textbf{Criterio} & \textbf{Penalización en la formulación UD2}\\
 \midrule
 Capacidad & 1 punto por estudiante sin plaza y sesión.\\
 Días mínimos de docencia & 5 puntos por día faltante respecto al mínimo de la asignatura.\\
-Compactación del currículo & 2 puntos por sesión aislada y currículo, sin sesión adyacente del mismo currículo ese día.\\
+Compactación del grupo & 2 puntos por sesión aislada y grupo, sin sesión adyacente del mismo grupo ese día.\\
 Estabilidad del aula & 1 punto por aula distinta adicional utilizada por una asignatura.\\
 \bottomrule
 \end{tabular}
@@ -70,32 +65,38 @@ Estabilidad del aula & 1 punto por aula distinta adicional utilizada por una asi
 
 \section{Objetivos y preguntas de investigación}
 
-El objetivo general es caracterizar la evolución reciente de los métodos para CB-CTT, analizar el papel de sus benchmarks y tendencias de adaptación, y evaluar hasta qué punto puede reproducirse un resultado reciente mediante artefactos públicos. El estudio mantiene ITC-2007 UD2 como referencia experimental principal e ITC-2019 como contexto para discutir la evolución hacia formulaciones universitarias más ricas.
+El objetivo general es describir la evolución reciente de los métodos para CB-CTT y comprobar hasta qué punto puede reproducirse un resultado reciente con artefactos públicos. La tercera modalidad de ITC-2007 es la referencia experimental principal. ITC-2019 se utiliza como contexto para comentar la evolución hacia formulaciones universitarias más completas.
 
 
-Se plantean cuatro preguntas de investigación: RQ1, qué enfoques algorítmicos se han utilizado para CB-CTT entre 2015 y 2026 y cómo han evolucionado; RQ2, cómo han evolucionado los benchmarks, qué escalas y características cubren y qué papel conserva ITC-2007; RQ3, qué tendencias recientes aparecen en hibridación, hiperheurísticas, selección de algoritmos, configuración automática y aprendizaje automático; y RQ4, hasta qué punto pueden reproducirse resultados recientes usando implementaciones, configuraciones y benchmarks públicos.
+Las preguntas de investigación son las siguientes:
+\begin{enumerate}
+\item ¿Qué enfoques algorítmicos se han utilizado para CB-CTT entre 2015 y 2026?
+\item ¿Qué características tienen los conjuntos de instancias y qué papel conserva ITC-2007?
+\item ¿Qué tendencias aparecen en hibridación, hiperheurísticas, selección automática y aprendizaje automático?
+\item ¿Hasta qué punto pueden reproducirse resultados recientes con implementaciones y datos públicos?
+\end{enumerate}
 
 
 \section{Búsqueda y selección bibliográfica}
 
-La búsqueda se cerró el 4 de octubre de 2026 y utilizó como ventana principal 2015--2026, conservando trabajos anteriores únicamente cuando eran fundacionales para el problema, el benchmark o una línea metodológica. Se consultaron páginas editoriales, repositorios institucionales y de autores, recursos oficiales de benchmarks y literatura localizada mediante seguimiento de referencias. Como anclas para el snowballing se utilizaron las revisiones de Bettinelli et al. \cite{ref3}, Ceschia et al. \cite{ref2} y Gu et al. \cite{ref4}. Entre las consultas ejecutadas figuraron «"curriculum based course timetabling"», «"CB-CTT"», combinaciones con «exact methods», «constraint programming», «algorithm selection», «hyper-heuristic», «hybrid», «adaptive» y consultas específicas sobre ITC-2019.
+La búsqueda se cerró el 4 de octubre de 2026 y cubrió el periodo comprendido entre 2015 y 2026. Se consultaron páginas editoriales, repositorios institucionales y de autores, recursos oficiales de los conjuntos de instancias y las referencias de los trabajos más relevantes. También se utilizaron las revisiones de Bettinelli et al. \cite{ref3}, Ceschia et al. \cite{ref2} y Gu et al. \cite{ref4} para localizar estudios adicionales. Las consultas combinaron los términos \textit{curriculum based course timetabling}, \textit{CB-CTT}, \textit{exact methods}, \textit{constraint programming}, \textit{algorithm selection}, \textit{hyper-heuristic}, \textit{hybrid} y \textit{adaptive}.
 
 
-El cribado aplicó criterios explícitos. Se incluyeron estudios de 2015--2026 que abordaran CB-CTT o una extensión directamente relacionada, propusieran o evaluaran un método computacional, reportaran resultados o análisis de benchmark, utilizaran datos identificables y dispusieran de suficiente información académica. Se excluyeron trabajos centrados únicamente en exámenes o enseñanza escolar, duplicados, documentos sin evidencia suficiente y publicaciones anteriores a 2015 que no fueran fundacionales. De 40 candidatos se incluyeron 25 estudios primarios: 21 de CB-CTT central y 4 extensiones explícitas; 13 documentos se conservaron solo como contexto y 2 se excluyeron.
+La selección siguió tres criterios. El estudio debía tratar CB-CTT o una extensión directa, evaluar un método computacional y proporcionar resultados sobre instancias identificables. Se descartaron trabajos sobre exámenes o enseñanza escolar, duplicados y documentos sin información suficiente. De los 40 trabajos localizados se conservaron 25 estudios primarios, 21 centrados en CB-CTT y 4 sobre extensiones explícitas.
 
 
-Para cada estudio primario se extrajeron año, familia y método, benchmark o datos, escala, métricas, comparadores, resultado principal, disponibilidad de datos y código, evidencia de reproducibilidad y cobertura de RQ. Esta matriz sustenta los recuentos y figuras cuantitativas de la Sección~\ref{subsec:reviewquant}. La matriz completa de cribado y extracción, con DOI/URL y decisión de inclusión, se conserva como material suplementario de la entrega (Matriz\_Maestra\_CB-CTT\_Screening\_2015-2026\_v5\_Data\_Extraction.xlsx); por tanto, los porcentajes reportados no proceden de un recuento bibliográfico implícito.
+De cada estudio se registraron el año, el método, el conjunto de instancias, las métricas, los comparadores y la disponibilidad de datos y código. También se anotó la información disponible para repetir el experimento. Estos datos forman la matriz suplementaria y sustentan las cifras de la Sección~\ref{subsec:reviewquant}.
 
 
 \section{Benchmarks de referencia}
 
-ITC-2007 Track 3 proporciona 21 instancias procedentes de la Universidad de Udine, publicadas en tres conjuntos de siete. Constituye el benchmark principal de este trabajo por disponer de una definición común de factibilidad y coste \cite{ref1}. La revisión de Ceschia et al. \cite{ref2} depura esta colección: excluye comp11, cuyo óptimo cero alcanzan consistentemente los métodos competitivos, y comp15, equivalente a comp03 bajo UD2. La propuesta adopta así 19 instancias de evaluación; esta selección no modifica el tamaño original del benchmark.
+La tercera modalidad de ITC-2007 proporciona 21 instancias de la Universidad de Udine, publicadas en tres conjuntos de siete. Es el conjunto de referencia porque utiliza una definición común de factibilidad y coste \cite{ref1}. Ceschia et al. \cite{ref2} excluyen comp11, cuyo coste objetivo es cero, y comp15, equivalente a comp03 en la formulación UD2. En este trabajo se utilizan las 19 instancias restantes.
 
 
 ITC-2019 responde a un modelo más amplio. Integra la asignación de clases a horarios y aulas con la distribución de estudiantes entre grupos, conocida como student sectioning. Permite configuraciones de teoría, prácticas o laboratorios, patrones de días y semanas y restricciones de distribución. La descripción de sus organizadores documenta 30 instancias competitivas y seis de prueba, procedentes de diez universidades \cite{ref5}.
 
 
-La función objetivo de ITC-2019 combina penalizaciones de tiempo, aula, distribución y conflictos de estudiantes, con pesos definidos en la instancia \cite{ref5}. Sus puntuaciones no son directamente comparables con el coste UD2. La diferencia central es el modelo de decisión: ITC-2007 emplea currículos predefinidos para representar conflictos, mientras que ITC-2019 incorpora la asignación de estudiantes a grupos. Por tanto, ambas denominaciones deben acompañarse de su formulación al identificar los datos utilizados en un artículo.
+La función objetivo de ITC-2019 combina penalizaciones de tiempo, aula, distribución y conflictos de estudiantes, con pesos definidos en cada instancia \cite{ref5}. Sus puntuaciones no se pueden comparar directamente con el coste de UD2. ITC-2007 representa los conflictos mediante grupos de asignaturas. ITC-2019 añade la asignación de estudiantes a grupos. Por eso, cualquier comparación debe indicar la formulación y el conjunto de instancias utilizado.
 
 
 \section{Estado del arte}
@@ -104,13 +105,13 @@ La función objetivo de ITC-2019 combina penalizaciones de tiempo, aula, distrib
 
 \subsubsection{Programación entera y descomposición}
 
-La programación lineal entera mixta (MIP o MILP) representa las asignaciones mediante variables binarias y expresa las restricciones como relaciones algebraicas. La búsqueda por ramificación y acotación, reforzada con cortes válidos, puede producir horarios y cotas inferiores \cite{ref3}. En minimización, un horario factible proporciona una cota superior; una cota inferior certifica un valor por debajo del cual no puede situarse el óptimo. Cuando ambas coinciden se demuestra optimalidad. Si se agota el tiempo antes de cerrar esa diferencia, la mejor solución encontrada no debe presentarse como óptima.
+La programación lineal entera mixta (MIP o MILP) representa las asignaciones mediante variables binarias y expresa las restricciones como relaciones algebraicas. La búsqueda por ramificación y acotación, reforzada con cortes válidos, puede producir horarios y cotas inferiores \cite{ref3}. En un problema de minimización, un horario factible proporciona una cota superior. La cota inferior marca un valor que el óptimo no puede superar por abajo. Cuando ambas coinciden, el óptimo queda certificado. Si el tiempo termina antes, la mejor solución encontrada no debe presentarse como óptima.
 
 
-La estructura de la formulación influye en su rendimiento. Bagger, Kristiansen, Sørensen y Stidsen \cite{ref6} desarrollan modelos que conectan la planificación temporal y la asignación de aulas mediante flujos. Su formulación basada en flujo de coste mínimo reduce las variables enteras respecto a una formulación directa y obtiene, en sus experimentos, mejores cotas superiores medias que los otros enfoques MIP comparados. La contribución muestra que explotar la estructura del problema puede ser tan relevante como elegir el solver; no acredita una superioridad universal sobre todas las familias de algoritmos.
+La formulación también influye en el rendimiento. Bagger, Kristiansen, Sørensen y Stidsen \cite{ref6} conectan la planificación temporal y la asignación de aulas mediante modelos de flujo. En sus experimentos, esta formulación obtiene mejores cotas superiores medias que las alternativas MIP comparadas. El resultado se refiere a ese conjunto de instancias y no permite establecer una ventaja general para todas las familias de algoritmos.
 
 
-Bagger, Sørensen y Stidsen \cite{ref7} aplican descomposición de Dantzig-Wolfe y generación de columnas a patrones diarios. En el conjunto de 20 instancias de su estudio, mejoran las cotas inferiores de las cuatro que permanecían abiertas y reducen la brecha media de esas cuatro del 24 \% al 11 \%. Es una mejora de la estimación del óptimo, no una reducción equivalente del coste de los horarios. El procedimiento calcula cotas; el artículo no presenta un algoritmo completo de branch-and-price. Estos resultados describen la comparación publicada en 2019, no el estado actual de todas las instancias.
+Bagger, Sørensen y Stidsen \cite{ref7} aplican descomposición de Dantzig-Wolfe y generación de columnas a patrones diarios. En las 20 instancias de su estudio mejoran las cotas inferiores de cuatro casos y reducen su brecha media del 24 \% al 11 \%. Se trata de una mejora en la estimación del óptimo, no de una reducción equivalente del coste de los horarios. El procedimiento calcula cotas y el artículo no presenta un algoritmo completo de branch-and-price.
 
 
 \subsubsection{Restricciones y modelos lógicos}
@@ -118,7 +119,7 @@ Bagger, Sørensen y Stidsen \cite{ref7} aplican descomposición de Dantzig-Wolfe
 La programación por restricciones (CP) trabaja con dominios de valores y propaga restricciones para descartar asignaciones incompatibles. La satisfacibilidad proposicional (SAT) formula la factibilidad mediante cláusulas lógicas, mientras que MaxSAT parcial ponderado permite optimizar penalizaciones manteniendo cláusulas obligatorias. Asín Achá y Nieuwenhuis \cite{ref8} constituyen un antecedente de su aplicación a CB-CTT. Esta distinción entre satisfacer restricciones y optimizar el coste también es esencial al interpretar los métodos recientes.
 
 
-La programación de conjuntos de respuesta (ASP) ofrece otro paradigma declarativo. Banbara et al. \cite{ref9} desarrollan teaspoon y evalúan 61 instancias bajo cinco formulaciones, es decir, 305 combinaciones. Informan de 54 mejoras de resultados previos, incluidas 16 nuevas soluciones óptimas. Estas cifras corresponden al conjunto de formulaciones y configuraciones analizado, no exclusivamente a las 21 instancias originales de ITC-2007 UD2. Su aportación es relevante tanto para expresar variantes del problema como para obtener certificados en parte de los casos.
+La programación de conjuntos de respuesta (ASP) ofrece otro enfoque declarativo. Banbara et al. \cite{ref9} desarrollan teaspoon y evalúan 61 instancias con cinco formulaciones, es decir, 305 combinaciones. Informan de 54 mejoras sobre resultados previos, incluidas 16 nuevas soluciones óptimas. Estas cifras corresponden a las formulaciones y configuraciones de su estudio, no solo a las 21 instancias originales de ITC-2007 UD2.
 
 
 El análisis distingue tres aportaciones diferentes: obtener un horario factible, establecer una cota inferior y certificar un óptimo. Separarlas evita interpretar una mejora de cota como si fuese necesariamente una mejora equivalente del horario producido.
@@ -126,7 +127,7 @@ El análisis distingue tres aportaciones diferentes: obtener un horario factible
 
 \subsection{Metaheurísticas}
 
-Una vez alcanzada la factibilidad, el espacio de soluciones sigue siendo muy amplio; por ello, una parte sustancial de la literatura de CB-CTT recurre a metaheurísticas y búsqueda local \cite{ref2}. Estas técnicas exploran vecindarios de horarios y utilizan reglas de aceptación o mecanismos de diversificación para escapar de óptimos locales.
+Una vez alcanzada la factibilidad, todavía quedan muchas combinaciones posibles. Por eso, buena parte de la literatura de CB-CTT recurre a metaheurísticas y búsqueda local \cite{ref2}. Estas técnicas exploran vecindarios de horarios y utilizan reglas de aceptación o mecanismos de diversificación para salir de óptimos locales.
 
 
 Los primeros trabajos sobre CB-CTT combinaron movimientos de reasignación e intercambio con Hill Climbing y búsqueda tabú. En la Segunda Competición Internacional de Horarios de 2007 (Second International Timetabling Competition, ITC-2007), el método de Müller obtuvo el mejor resultado en la modalidad dedicada a este problema. Su propuesta coordina cinco tipos de movimiento con Hill Climbing, Gran Diluvio (Great Deluge) y enfriamiento simulado \cite{ref10}. Hill Climbing conserva los cambios que mejoran el horario, Great Deluge utiliza un umbral de aceptación que varía durante la búsqueda y el enfriamiento simulado permite aceptar algunos empeoramientos.
@@ -165,9 +166,6 @@ Otra posibilidad consiste en combinar una población de horarios con una regla d
 
 \subsection{Nuevas líneas de investigación}
 
-Una línea reciente estudia cómo adaptar el algoritmo a cada instancia antes de comenzar la búsqueda. De Coster et al. describen cada problema mediante 256 características y entrenan selectores que recomiendan el algoritmo más apropiado para cada región del espacio de instancias \cite{ref17}. Este planteamiento desplaza la pregunta desde qué método es mejor en promedio hacia qué método conviene utilizar ante una estructura concreta de conflictos, aulas y disponibilidad.
-
-
 Una línea reciente estudia cómo adaptar el algoritmo a cada instancia o combinar construcción exacta y mejora local. De Coster et al. describen cada problema mediante 256 características y entrenan selectores que recomiendan el algoritmo más apropiado para distintas regiones del espacio de instancias \cite{ref17}. En 2026, Nguyen combina una inicialización CP-SAT con VND y perturbación guiada por penalizaciones sobre ITC-2007 \cite{ref21}. En conjunto, estas propuestas desplazan la pregunta desde qué método es mejor en promedio hacia qué método o configuración conviene utilizar ante una estructura concreta de conflictos, aulas y disponibilidad.
 
 
@@ -179,7 +177,7 @@ En el método que se reproduce, Hill Climbing obtiene un horario factible y el e
 LectureKick es la regla de vecindario con la que el algoritmo genera el siguiente horario. Ceschia et al. la aplican después de una inicialización mediante Hill Climbing y dentro de una fase de enfriamiento simulado \cite{ref18}. La regla reubica una o dos clases sin incumplir las restricciones obligatorias. Antes de aplicarla, el programa construye un horario factible y calcula las cuatro penalizaciones blandas del problema.
 
 
-Cada clase ocupa un hueco definido por un periodo y un aula. En la nota$c_i$ón de la Fig.~\ref{fig:lecturekick}, $l_i$ identifica una clase, $c_i$ indica el curso al que pertenece esa clase y $s_i$ representa un hueco del horario. Por ejemplo, $l_2$:$c_2$ $s_i$gnifica que la segunda clase pertenece al curso $c_2$. LectureKick parte de $l_1$ $s_i$tuada en $s_1$ y propone trasladarla a $s_2$. Si el destino está $l_i$bre, basta con mover $l_1$. Cuando $s_2$ contiene otra clase $l_2$, LectureMove solo permite enviarla al hueco $l_i$berado $s_1$. LectureKick añade la po$s_i$bi$l_i$dad de colocar $l_2$ en cualquier hueco $l_i$bre $s_3$. De este modo puede alcanzar horarios que no están disponibles mediante un intercambio directo.
+Cada clase ocupa un hueco definido por un periodo y un aula. En la notación de la Fig.~\ref{fig:lecturekick}, $l_i$ identifica una clase, $c_i$ indica el curso al que pertenece y $s_i$ representa un hueco del horario. Por ejemplo, $l_2$:$c_2$ significa que la segunda clase pertenece al curso $c_2$. LectureKick parte de $l_1$ situada en $s_1$ y propone trasladarla a $s_2$. Si el destino está libre, basta con mover $l_1$. Cuando $s_2$ contiene otra clase $l_2$, LectureMove solo permite enviarla al hueco liberado $s_1$. LectureKick añade la posibilidad de colocar $l_2$ en cualquier hueco libre $s_3$. De este modo puede alcanzar horarios que no están disponibles mediante un intercambio directo.
 
 
 \begin{figure}[!t]
@@ -192,7 +190,7 @@ Cada clase ocupa un hueco definido por un periodo y un aula. En la nota$c_i$ón 
 Los destinos deben ser distintos, los periodos deben estar disponibles y las clases implicadas no pueden presentar conflictos. Cuando se utiliza s3, ese hueco debe permanecer libre. Estas condiciones hacen que la regla trabaje únicamente con horarios factibles.
 
 
-La elección de movimientos tampoco es uniforme. El diseño estudiado por Ceschia et al. considera seis mecanismos de sesgo: días mínimos, cursos críticos vinculados a clases aisladas, capacidad, estabilidad de aula, preferencia por aulas adecuadas y frecuencia de intercambios. Tras el análisis de sensibilidad, no todos quedan como parámetros libres en la configuración final: el sesgo de capacidad se fija a 0 y la preferencia por aulas adecuadas se fija a 1, mientras que los restantes sesgos relevantes se afinan junto con los parámetros del enfriamiento simulado \cite{ref18}. La Fig.~\ref{fig:biases} resume los seis mecanismos considerados durante el diseño.
+La elección de movimientos tampoco es uniforme. Ceschia et al. consideran seis mecanismos de sesgo: días mínimos, cursos críticos vinculados a clases aisladas, capacidad, estabilidad de aula, preferencia por aulas adecuadas y frecuencia de intercambios. Tras el análisis de sensibilidad, el sesgo de capacidad queda fijado a 0 y la preferencia por aulas adecuadas a 1. Los demás parámetros se ajustan junto con el enfriamiento simulado \cite{ref18}. La Fig.~\ref{fig:biases} resume estos mecanismos.
 
 
 \begin{figure*}[!t]
@@ -202,7 +200,7 @@ La elección de movimientos tampoco es uniforme. El diseño estudiado por Ceschi
 \label{fig:biases}
 \end{figure*}
 
-Ceschia et al. emplearon irace para configurar automáticamente el método \cite{ref18}, \cite{ref19}. La afinación incluyó la temperatura inicial y final, la tasa de enfriamiento, el mecanismo de corte y las probabilidades de los sesgos que permanecieron activos tras el screening. Una vez seleccionada la configuración, sus valores se mantuvieron fijos durante la evaluación final. Esta distinción es importante porque la compilación ENHANCED del repositorio oficial conserva por compatibilidad opciones que ya no modifican el comportamiento final.
+Ceschia et al. emplearon irace para elegir los parámetros antes de la evaluación final \cite{ref18}, \cite{ref19}. El programa comparó distintas combinaciones en un conjunto de entrenamiento y conservó las que ofrecían mejores resultados. Entre los parámetros ajustados estaban la temperatura, la tasa de enfriamiento y las probabilidades de los sesgos activos. La configuración seleccionada se mantuvo después durante las ejecuciones de evaluación.
 
 
 \section{Metodología de reproducción}
@@ -212,10 +210,10 @@ Se ejecutó el programa publicado por Ceschia et al. con la configuración utili
 
 \subsection{Diseño experimental}
 
-Se seleccionaron las 19 instancias no redundantes de la formulación UD2 de ITC-2007. Se omitió comp11 porque su coste objetivo es nulo y comp15 porque equivale a comp03 bajo esta formulación. Cada instancia se ejecutó tres veces con semillas distintas, lo que dio lugar a 57 ejecuciones. El programa convirtió el límite virtual de 192 segundos en un presupuesto de búsqueda específico para cada instancia.
+Se seleccionaron las 19 instancias no redundantes de la formulación UD2 de ITC-2007. Se omitió comp11 porque su coste objetivo es nulo y comp15 porque equivale a comp03 bajo esta formulación. Cada instancia se ejecutó tres veces con semillas distintas, lo que dio lugar a 57 ejecuciones. El programa convirtió el límite virtual de 192 segundos en un presupuesto de búsqueda específico para cada instancia. Este límite sirve para fijar el esfuerzo de búsqueda y no representa una medición directa del tiempo de ejecución.
 
 
-En cada ejecución, el programa construyó primero un horario y aplicó Hill Climbing hasta alcanzar una solución factible. Después utilizó enfriamiento simulado con LectureKick hasta agotar el presupuesto asignado. Al finalizar se verificaron el código de salida, el coste numérico y la ausencia de violaciones duras; además se conservaron el log y la solución de cada combinación instancia-semilla. Los scripts, results.csv, logs y soluciones de la campaña están disponibles en el repositorio del proyecto \cite{ref22}.
+En cada ejecución, el programa construyó primero un horario y aplicó Hill Climbing hasta alcanzar una solución factible. Después utilizó enfriamiento simulado con LectureKick hasta agotar el presupuesto asignado. Al finalizar se verificaron el código de salida, el coste numérico y la factibilidad del horario. También se conservaron el registro y la solución de cada combinación de instancia y semilla. Los scripts, results.csv, logs y soluciones están disponibles en el repositorio del proyecto \cite{ref22}.
 
 
 Por limitaciones computacionales, la reproducción emplea tres semillas por instancia frente a las 30 ejecuciones independientes del artículo y se ejecuta en un entorno diferente. En consecuencia, permite comprobar el procedimiento, la factibilidad y la estabilidad básica de la ejecución, pero no reproducir con la misma potencia estadística las medias y desviaciones publicadas. La Tabla~\ref{tab:entorno} resume las diferencias técnicas \cite{ref18}, \cite{ref20}.
@@ -241,12 +239,12 @@ Compilador & G++ 13.3 & G++ 16.2 / UCRT64\\
 
 \subsection{Validez de la campaña reproducida}
 
-La campaña produjo 57/57 ejecuciones válidas mediante BHC-KSA, usando las semillas 0, 1 y 2, un límite virtual de 192 s, el commit 9cb3eb6 del solver y el commit b40b14c de EasyLocal++ 3. No se registró ninguna violación de restricciones duras. La configuración reproduce los parámetros finales de Ceschia et al. \cite{ref18}. El artículo se ejecutó en Ubuntu 24.04, GNU G++ 13.3 y un Intel Core i7-7700 a 3.60 GHz, utilizando un único núcleo virtual por ejecución; la reproducción se realizó en Windows 10, MSYS2 UCRT64, GNU G++ 16.2 e Intel i7-9700F. Por ello, los tiempos se utilizan como evidencia descriptiva y no como una réplica exacta del rendimiento temporal \cite{ref18}, \cite{ref20}.
+La campaña produjo 57 ejecuciones válidas con las semillas 0, 1 y 2 y un límite virtual de 192 s. Se utilizaron las versiones fijadas del solver y de EasyLocal++ 3. La configuración reproduce los parámetros finales de Ceschia et al. \cite{ref18}. El artículo se ejecutó en Ubuntu 24.04 con GNU G++ 13.3 y un Intel Core i7-7700. La reproducción se realizó en Windows 10 con MSYS2 UCRT64, GNU G++ 16.2 e Intel i7-9700F. Por ello, los tiempos se interpretan como evidencia descriptiva y no como una réplica exacta del rendimiento temporal \cite{ref18}, \cite{ref20}.
 
 
 \subsection{Comparación con el estudio de 2026 y con el estado del arte}
 
-Para evitar confundir reproducibilidad con competitividad se emplean dos referencias distintas. Ceschia et al. \cite{ref18} resuelven cada instancia de validación mediante 30 ejecuciones y, en su Tabla 5, reportan media, desviación estándar, mínimo e iteraciones. Bajo el límite ITC-2007, su SA obtiene el mejor promedio en 7 de las 19 instancias y el mejor rango medio (1.79) entre los métodos comparados, aunque la prueba de Friedman no distingue globalmente a los métodos al nivel 0.05. Con solo tres semillas, la campaña de este trabajo no permite reproducir esas distribuciones ni repetir sus pruebas estadísticas; por ello, la comparación con \cite{ref18} se interpreta como reproducción funcional del protocolo. De forma separada, la Tabla~\ref{tab:entorno}I utiliza los mejores valores conocidos/upper bounds compilados en \cite{ref2} para medir distancia al estado del arte, y no atribuye esos valores al algoritmo de 2026.
+Para evitar confundir reproducibilidad con competitividad se emplean dos referencias distintas. Ceschia et al. \cite{ref18} resuelven cada instancia de validación mediante 30 ejecuciones y, en su Tabla 5, reportan media, desviación estándar, mínimo e iteraciones. Bajo el límite ITC-2007, el enfriamiento simulado obtiene el mejor promedio en 7 de las 19 instancias y el mejor rango medio (1.79) entre los métodos comparados, aunque la prueba de Friedman no distingue globalmente a los métodos al nivel 0.05. Con solo tres semillas, la campaña de este trabajo no permite reproducir esas distribuciones ni repetir sus pruebas estadísticas. Por ello, la comparación con \cite{ref18} se interpreta como reproducción funcional del protocolo. De forma separada, la Tabla~\ref{tab:results} utiliza los mejores valores conocidos compilados en \cite{ref2} para medir la distancia al estado del arte, sin atribuir esos valores al algoritmo de 2026.
 
 
 \begin{table*}[!t]
@@ -302,7 +300,7 @@ comp21 & 74 & 86 & 94.00 & 16.2\% & 289.7\\
 \end{tabular}
 \end{table*}
 
-El mejor resultado reproducido igualó el best-known de \cite{ref2} en 2 de 19 instancias: comp01 (5) y comp13 (59). En las otras 17 instancias el mejor coste fue superior. El gap porcentual mediano fue 16.2\%; la media fue 46.3\%, valor muy influido por instancias con referencias pequeñas como comp10 y comp20. La media de los mejores costes reproducidos fue 74.68 frente a 66.11 para los best-known. Estas cifras describen competitividad frente al estado del arte y no equivalencia con las 30 ejecuciones del algoritmo de 2026. El tiempo medio reportado por el solver fue 302.5 s por ejecución, pero no es directamente comparable con el tiempo de referencia porque cambia el entorno y el límite virtual se transforma en un número de iteraciones específico por instancia \cite{ref18}.
+El mejor resultado reproducido igualó el mejor valor conocido de \cite{ref2} en 2 de 19 instancias: comp01 (5) y comp13 (59). En las otras 17 instancias el mejor coste fue superior. El gap porcentual mediano fue 16.2\% y la media fue 46.3\%, valor muy influido por instancias con referencias pequeñas como comp10 y comp20. La media de los mejores costes reproducidos fue 74.68 frente a 66.11 para los mejores valores conocidos. Estas cifras describen la competitividad frente al estado del arte y no equivalen a las 30 ejecuciones del algoritmo de 2026. El tiempo medio reportado por el solver fue 302.5 s por ejecución, pero no es directamente comparable con el tiempo de referencia porque cambia el entorno y el límite virtual se transforma en un número de iteraciones específico por instancia \cite{ref18}.
 
 
 \begin{figure}[!t]
@@ -321,7 +319,7 @@ El mejor resultado reproducido igualó el best-known de \cite{ref2} en 2 de 19 i
 
 \subsection{Resultados de la revisión cuantitativa}\label{subsec:reviewquant}
 
-La matriz de extracción contiene 25 estudios primarios de 2015--2026: 21 corresponden al núcleo CB-CTT y 4 a extensiones explícitas. En este corpus, los métodos exactos, matemáticos y declarativos constituyen la mayor familia individual (28\%), mientras que búsqueda local, métodos evolutivos y aprendizaje automático/selección/configuración representan 16\% cada uno. Dieciséis estudios (64\%) utilizan explícitamente ITC-2007. Veinte (80\%) usan datos públicos o mayoritariamente públicos, pero solo en dos (8\%) se verificó código público junto con una configuración suficientemente detallada para clasificarlos con reproducibilidad alta. La comparación entre estas cifras muestra una diferencia clara entre disponibilidad del benchmark y disponibilidad del experimento ejecutable.
+La matriz de extracción contiene 25 estudios primarios publicados entre 2015 y 2026: 21 corresponden al núcleo CB-CTT y 4 a extensiones explícitas. En este conjunto de estudios, los métodos exactos, matemáticos y declarativos constituyen la mayor familia individual (28\%), mientras que búsqueda local, métodos evolutivos y aprendizaje automático, selección y configuración representan 16\% cada uno. Dieciséis estudios (64\%) utilizan explícitamente ITC-2007. Veinte (80\%) usan datos públicos o mayoritariamente públicos, pero solo en dos (8\%) se verificó código público junto con una configuración suficientemente detallada para clasificarlos con reproducibilidad alta. La comparación entre estas cifras muestra una diferencia clara entre la disponibilidad del benchmark y la disponibilidad del experimento ejecutable.
 
 
 \begin{figure}[!t]
@@ -334,27 +332,27 @@ La matriz de extracción contiene 25 estudios primarios de 2015--2026: 21 corres
 \begin{figure*}[!t]
 \centering
 \includegraphics[width=0.88\textwidth]{fig8.png}
-\caption{Uso explícito de ITC-2007 y niveles de reproducibilidad en el corpus de 25 estudios primarios.}
+\caption{Uso explícito de ITC-2007 y niveles de reproducibilidad en el conjunto de estudios de 25 estudios primarios.}
 \label{fig:repro}
 \end{figure*}
 
 \section{Discusión y amenazas a la validez}
 
-La reproducción confirma la factibilidad técnica del artefacto de Ceschia et al. \cite{ref18}: el código compila, las 57 ejecuciones terminan correctamente y las soluciones respetan todas las restricciones duras. Sin embargo, no reproduce la distribución estadística reportada por el artículo, que emplea 30 ejecuciones independientes por instancia. Tres semillas permiten verificar el procedimiento y observar variabilidad básica, pero no afirmar equivalencia estadística entre medias o desviaciones. La distancia frente a los best-known de la Tabla~\ref{tab:entorno}I tampoco constituye un fallo del artefacto: esos valores agregan resultados de distintos métodos y presupuestos computacionales \cite{ref2}, mientras que la campaña ejecutada aquí usa un único protocolo y solo tres semillas.
+La reproducción confirma la factibilidad técnica del artefacto de Ceschia et al. \cite{ref18}: el código compila, las 57 ejecuciones terminan correctamente y las soluciones respetan todas las restricciones duras. Sin embargo, no reproduce la distribución estadística reportada por el artículo, que emplea 30 ejecuciones independientes por instancia. Tres semillas permiten verificar el procedimiento y observar variabilidad básica, pero no afirmar equivalencia estadística entre medias o desviaciones. La distancia frente a los mejores valores conocidos de la Tabla~\ref{tab:results} tampoco constituye un fallo del artefacto. Esos valores agregan resultados de distintos métodos y presupuestos computacionales \cite{ref2}, mientras que la campaña ejecutada aquí usa un único protocolo y solo tres semillas.
 
 
-La principal amenaza a la validez interna procede del cambio de plataforma y del reducido número de repeticiones. Aunque BHC-KSA convierte el límite virtual en un presupuesto de iteraciones para reducir la dependencia del hardware, el tiempo medido continúa afectado por sistema operativo, compilador, CPU y sobrecarga de E/S. En consecuencia, la comparación debe centrarse en factibilidad y calidad de las soluciones, no en igualdad de segundos. Para una réplica estadística del estudio de 2026 sería necesario ejecutar 30 repeticiones por instancia y reproducir las mismas pruebas estadísticas de \cite{ref18}.
+La principal amenaza a la validez interna procede del cambio de plataforma y del reducido número de repeticiones. Aunque el método reproducido convierte el límite virtual en un presupuesto de iteraciones para reducir la dependencia del hardware, el tiempo medido continúa afectado por sistema operativo, compilador, CPU y sobrecarga de E/S. En consecuencia, la comparación debe centrarse en la factibilidad y la calidad de las soluciones, no en la igualdad de segundos. Para una réplica estadística del estudio de 2026 sería necesario ejecutar 30 repeticiones por instancia y reproducir las mismas pruebas estadísticas de \cite{ref18}.
 
 
-Respecto a la validez externa, ITC-2007 sigue siendo útil porque ofrece una función objetivo y restricciones estandarizadas y aparece explícitamente en el 64\% del corpus analizado. No obstante, ITC-2019 incorpora student sectioning, estructuras de clases y restricciones institucionales más ricas \cite{ref5}. Por ello, un algoritmo competitivo en UD2 no puede considerarse automáticamente adecuado para todas las configuraciones universitarias actuales. Los trabajos recientes amplían la evaluación con otras familias reales, instancias sintéticas y enfoques híbridos o adaptativos \cite{ref17}, \cite{ref18}, \cite{ref21}.
+Respecto a la validez externa, ITC-2007 sigue siendo útil porque ofrece una función objetivo y restricciones estandarizadas y aparece explícitamente en el 64\% del conjunto de estudios analizado. No obstante, ITC-2019 incorpora student sectioning, estructuras de clases y restricciones institucionales más ricas \cite{ref5}. Por ello, un algoritmo competitivo en UD2 no puede considerarse automáticamente adecuado para todas las configuraciones universitarias actuales. Los trabajos recientes amplían la evaluación con otras familias reales, instancias sintéticas y enfoques híbridos o adaptativos \cite{ref17}, \cite{ref18}, \cite{ref21}.
 
 
 \section{Conclusiones}
 
-En el corpus analizado, CB-CTT muestra una evolución hacia la combinación de optimización exacta, metaheurísticas, hibridación y mecanismos de adaptación. El aprendizaje automático aparece principalmente como apoyo para selección, caracterización y configuración de algoritmos, no como sustituto directo del optimizador \cite{ref17}, \cite{ref4}. ITC-2007 continúa siendo la referencia común más frecuente del corpus, pero se complementa con conjuntos de datos más diversos para estudiar generalización y realismo.
+En el conjunto de estudios analizado, CB-CTT muestra una evolución hacia la combinación de optimización exacta, metaheurísticas, hibridación y mecanismos de adaptación. El aprendizaje automático aparece principalmente como apoyo para selección, caracterización y configuración de algoritmos, no como sustituto directo del optimizador \cite{ref17}, \cite{ref4}. ITC-2007 continúa siendo la referencia común más frecuente del conjunto de estudios, pero se complementa con conjuntos de datos más diversos para estudiar generalización y realismo.
 
 
-Experimentalmente, se reprodujo de extremo a extremo el artefacto BHC-KSA/LectureKick sobre 19 instancias y tres semillas, obteniéndose 57 soluciones factibles sin violaciones duras. La reproducción funcional del protocolo de \cite{ref18} debe distinguirse de la comparación de competitividad: el mejor coste igualó el best-known de la literatura en comp01 y comp13, mientras que en las demás instancias permaneció por encima. Dado que la campaña utiliza solo tres repeticiones y un entorno distinto, no constituye una réplica estadística completa del artículo de 2026. El mismo contraste aparece en la revisión: en el corpus analizado los benchmarks son mayoritariamente públicos, pero el código y la configuración completa son mucho menos frecuentes.
+Experimentalmente, se reprodujo de extremo a extremo el artefacto basado en LectureKick sobre 19 instancias y tres semillas. La reproducción funcional del protocolo de \cite{ref18} debe distinguirse de la comparación de competitividad. El mejor coste igualó el mejor valor conocido de la literatura en comp01 y comp13, mientras que en las demás instancias permaneció por encima. Dado que la campaña utiliza solo tres repeticiones y un entorno distinto, no constituye una réplica estadística completa del artículo de 2026. El mismo contraste aparece en la revisión. En el conjunto de estudios analizado, los benchmarks son mayoritariamente públicos, pero el código y la configuración completa son mucho menos frecuentes.
 
 
 \balance
