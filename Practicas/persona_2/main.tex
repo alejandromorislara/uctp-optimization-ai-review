@@ -79,18 +79,18 @@ Las preguntas de investigación son las siguientes:
 
 \section{Búsqueda y selección bibliográfica}
 
-La revisión bibliográfica abarcó el periodo comprendido entre 2015 y 2026 y se cerró el 4 de octubre de 2026. Para localizar estudios adicionales se combinaron páginas editoriales, repositorios institucionales y de autores, recursos oficiales de los conjuntos de instancias y las revisiones de Bettinelli et al. \cite{ref3}, Ceschia et al. \cite{ref2} y Gu et al. \cite{ref4}.
+La revisión bibliográfica abarcó el periodo comprendido entre 2015 y 2026. Para localizar estudios adicionales se combinaron páginas editoriales, repositorios institucionales y de autores, recursos oficiales de los conjuntos de instancias y las revisiones de Bettinelli et al. \cite{ref3}, Ceschia et al. \cite{ref2} y Gu et al. \cite{ref4}.
 
 
-De cada estudio se registraron el año, el método, el conjunto de instancias, las métricas, los comparadores y la disponibilidad de datos y código, junto con la información necesaria para repetir el experimento. Estos datos forman la matriz suplementaria y sustentan las cifras de la Sección~\ref{subsec:reviewquant}.
+De cada estudio se registraron el año, el método, el conjunto de instancias, las métricas, los comparadores y la disponibilidad de datos y código, junto con la información necesaria para repetir el experimento.
 
 
 \section{Benchmarks de referencia}
 
-La tercera modalidad de ITC-2007 proporciona 21 instancias de la Universidad de Udine, publicadas en tres conjuntos de siete, y sirve como referencia porque utiliza una definición común de factibilidad y coste \cite{ref1}. Ceschia et al. \cite{ref2} excluyen comp11, cuyo coste objetivo es cero, y comp15, equivalente a comp03 en la formulación UD2. Por esa razón, este trabajo utiliza las 19 instancias restantes.
+La tercera modalidad de ITC-2007 proporciona 21 instancias de la Universidad de Udine, publicadas en tres conjuntos de siete, y sirve como referencia porque utiliza una definición común de restricciones y coste \cite{ref1}. Ceschia et al. \cite{ref2} excluyen dos instancias del conjunto: una tiene coste objetivo cero (comp11) y la otra es equivalente a comp03 en la formulación UD2 (comp15). Por esa razón, este trabajo utiliza las 19 instancias restantes.
 
 
-ITC-2019 responde a un modelo más amplio que integra la asignación de clases a horarios y aulas con la distribución de estudiantes entre grupos, conocida como student sectioning. También contempla configuraciones de teoría, prácticas o laboratorios, patrones de días y semanas y restricciones de distribución. La descripción de sus organizadores documenta 30 instancias competitivas y seis de prueba procedentes de diez universidades \cite{ref5}.
+ITC-2019 responde a un modelo más amplio que integra la asignación de clases a horarios y aulas con la distribución de estudiantes entre grupos, conocida como \textit{``student sectioning''}. También contempla configuraciones de teoría, prácticas o laboratorios, patrones de días y semanas y restricciones de distribución. La descripción de sus organizadores documenta 30 instancias competitivas y seis de prueba procedentes de diez universidades \cite{ref5}.
 
 
 La función objetivo de ITC-2019 combina penalizaciones de tiempo, aula, distribución y conflictos de estudiantes, con pesos definidos en cada instancia \cite{ref5}. Sus puntuaciones no se pueden comparar directamente con el coste de UD2 porque ITC-2007 representa los conflictos mediante grupos de asignaturas, mientras que ITC-2019 añade la asignación de estudiantes a grupos. Cualquier comparación debe indicar, por tanto, la formulación y el conjunto de instancias utilizado.
@@ -102,10 +102,10 @@ La función objetivo de ITC-2019 combina penalizaciones de tiempo, aula, distrib
 
 \subsubsection{Programación entera y descomposición}
 
-La programación lineal entera mixta (MIP o MILP) representa las asignaciones mediante variables binarias y expresa las restricciones como relaciones algebraicas. La búsqueda por ramificación y acotación, reforzada con cortes válidos, puede producir horarios y cotas inferiores \cite{ref3}. En un problema de minimización, el horario factible proporciona una cota superior y la cota inferior marca el valor por debajo del cual no puede situarse el óptimo. Cuando ambas coinciden, el óptimo queda certificado. Si el tiempo termina antes, la mejor solución encontrada debe presentarse como solución factible, no como óptima.
+La programación lineal entera mixta (MIP o MILP) modela las asignaciones mediante variables binarias y expresa las restricciones como relaciones algebraicas. La búsqueda por ramificación y acotación, reforzada con cortes válidos, puede generar horarios y cotas inferiores \cite{ref3}. En un problema de minimización, un horario factible fija una cota superior, mientras que la cota inferior marca un valor que el óptimo no puede rebasar por abajo. Si ambas coinciden, se certifica la optimalidad. Cuando el tiempo se agota antes, la mejor solución encontrada debe describirse como factible, no como óptima.
 
 
-La formulación también influye en el rendimiento. Bagger, Kristiansen, Sørensen y Stidsen \cite{ref6} conectan la planificación temporal y la asignación de aulas mediante modelos de flujo, cuya cota superior media supera en sus experimentos a la de las alternativas MIP comparadas. El resultado se refiere a ese conjunto de instancias y no permite establecer una ventaja general para todas las familias de algoritmos.
+La formulación también condiciona el rendimiento. Bagger, Kristiansen, Sørensen y Stidsen \cite{ref6} conectan la planificación temporal y la asignación de aulas mediante modelos de flujo. En sus experimentos, la cota superior media de esta formulación supera a la de las alternativas MIP comparadas, aunque el resultado se limita a ese conjunto de instancias y no establece una ventaja general para todas las familias de algoritmos.
 
 
 Bagger, Sørensen y Stidsen \cite{ref7} aplican descomposición de Dantzig-Wolfe y generación de columnas a patrones diarios. En las 20 instancias de su estudio mejoran las cotas inferiores de cuatro casos y reducen la brecha media del 24 \% al 11 \%. Esta mejora aproxima mejor el óptimo, pero no equivale a reducir en la misma medida el coste de los horarios. El procedimiento calcula cotas, pero el artículo no presenta un algoritmo completo de branch-and-price.
@@ -166,9 +166,6 @@ Otra posibilidad consiste en combinar una población de horarios con una regla d
 Una línea reciente adapta el algoritmo a cada instancia y combina construcción exacta con mejora local. De Coster et al. describen cada problema mediante 256 características y entrenan selectores que recomiendan el algoritmo más apropiado para distintas regiones del espacio de instancias \cite{ref17}. En 2026, Nguyen combina una inicialización CP-SAT con VND y perturbación guiada por penalizaciones sobre ITC-2007 \cite{ref21}. Estas propuestas desplazan la pregunta desde qué método es mejor en promedio hacia qué método o configuración conviene ante una estructura concreta de conflictos, aulas y disponibilidad.
 
 
-En el método que se reproduce, Hill Climbing obtiene un horario factible y el enfriamiento simulado decide si acepta cada modificación. LectureKick construye esa modificación respetando las restricciones del horario, de modo que el vecindario conecta la estrategia de aceptación con la estructura concreta de CB-CTT.
-
-
 \section{El vecindario LectureKick}
 
 LectureKick es la regla de vecindario con la que el algoritmo genera el siguiente horario. Ceschia et al. la aplican después de una inicialización mediante Hill Climbing y dentro de una fase de enfriamiento simulado \cite{ref18}. La regla reubica una o dos clases sin incumplir las restricciones obligatorias. Antes de aplicarla, el programa construye un horario factible y calcula las cuatro penalizaciones blandas del problema.
@@ -197,7 +194,7 @@ La elección de movimientos tampoco es uniforme. Ceschia et al. consideran seis 
 \label{fig:biases}
 \end{figure*}
 
-Ceschia et al. emplearon irace para elegir los parámetros antes de la evaluación final \cite{ref18}, \cite{ref19}. El programa comparó distintas combinaciones en un conjunto de entrenamiento y conservó las que ofrecían mejores resultados. Entre los parámetros ajustados estaban la temperatura, la tasa de enfriamiento y las probabilidades de los sesgos activos. La configuración seleccionada se mantuvo después durante las ejecuciones de evaluación.
+Ceschia et al. emplearon \textit{``irace''}, una herramienta de configuración automática que prueba combinaciones de parámetros antes de la evaluación final \cite{ref18}, \cite{ref19}. El programa comparó distintas combinaciones en un conjunto de entrenamiento y conservó las que ofrecían mejores resultados. Entre los parámetros ajustados estaban la temperatura, la tasa de enfriamiento y las probabilidades de los sesgos activos. La configuración seleccionada se mantuvo después durante las ejecuciones de evaluación.
 
 
 \section{Metodología de reproducción}
@@ -210,7 +207,7 @@ Se ejecutó el programa publicado por Ceschia et al. con la configuración utili
 Se seleccionaron las 19 instancias no redundantes de la formulación UD2 de ITC-2007. Se omitió comp11 porque su coste objetivo es nulo y comp15 porque equivale a comp03 bajo esta formulación. Cada instancia se ejecutó tres veces con semillas distintas, lo que dio lugar a 57 ejecuciones. El programa convirtió el límite virtual de 192 segundos en un presupuesto de búsqueda específico para cada instancia. Este límite sirve para fijar el esfuerzo de búsqueda y no representa una medición directa del tiempo de ejecución.
 
 
-En cada ejecución, el programa construyó primero un horario y aplicó Hill Climbing hasta alcanzar una solución factible. Después utilizó enfriamiento simulado con LectureKick hasta agotar el presupuesto asignado. Al finalizar se verificaron el código de salida, el coste numérico y la factibilidad del horario. También se conservaron el registro y la solución de cada combinación de instancia y semilla. Los scripts, results.csv, logs y soluciones están disponibles en el repositorio del proyecto \cite{ref22}.
+En cada ejecución, el programa construyó primero un horario y aplicó Hill Climbing hasta alcanzar una solución factible. Después utilizó enfriamiento simulado con LectureKick hasta agotar el presupuesto asignado. Al finalizar se verificaron el código de salida, el coste numérico y la factibilidad del horario.
 
 
 Por limitaciones computacionales, la reproducción emplea tres semillas por instancia frente a las 30 ejecuciones independientes del artículo y se ejecuta en un entorno diferente. En consecuencia, permite comprobar el procedimiento, la factibilidad y la estabilidad básica de la ejecución, pero no reproducir con la misma potencia estadística las medias y desviaciones publicadas. La Tabla~\ref{tab:entorno} resume las diferencias técnicas \cite{ref18}, \cite{ref20}.
