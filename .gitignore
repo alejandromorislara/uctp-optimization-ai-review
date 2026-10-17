@@ -30,23 +30,19 @@ output/pdf/MET_Block_I_Research_Proposal_SOTA_ES.pdf
 output/pdf/MET_P1_Poster_SOTA.pdf
 output/pdf/MET_P1_Propuesta_SOTA.pdf
 
-# Figuras no utilizadas en la versión actual
-Practicas/persona_2/figures/*
-!Practicas/persona_2/figures/paper/
-Practicas/persona_2/figures/paper/*
-!Practicas/persona_2/figures/paper/hybrid_attract_repel.png
-!Practicas/persona_2/figures/paper/gr1_lrg.jpg
-!Practicas/persona_2/figures/paper/gr2a_lrg.jpg
-!Practicas/persona_2/figures/paper/gr2b_lrg.jpg
-!Practicas/persona_2/figures/paper/gr2c_lrg.jpg
-!Practicas/persona_2/figures/paper/gr2d_lrg.jpg
-!Practicas/persona_2/figures/paper/gr2e_lrg.jpg
-!Practicas/persona_2/figures/paper/gr2f_lrg.jpg
-!Practicas/persona_2/figures/paper/simulated_annealing_flow.png
-!Practicas/persona_2/figures/source/
-Practicas/persona_2/figures/source/*
-!Practicas/persona_2/figures/source/abdullah_hybrid.pdf
-!Practicas/persona_2/figures/source/bellio_sa.pdf
+# Estructura anterior sustituida por el paquete actual de compañeros
+Practicas/persona_2/MET_P1_Persona2_EstadoArte_Reproduccion.tex
+Practicas/persona_2/persona2_section.tex
+Practicas/persona_2/persona2_references.bib
+Practicas/persona_2/matriz_bibliografica.md
+Practicas/persona_2/figures/paper/
+Practicas/persona_2/figures/source/
+Practicas/persona_2/figures/familias_metodos.pdf
+Practicas/persona_2/figures/flujo_reproduccion.pdf
+Practicas/persona_2/figures/lecturekick.pdf
+Practicas/persona_2/figures/lecturekick.tex
+Practicas/persona_2/figures/lecturekick_comparacion.pdf
+output/pdf/main.pdf
 
 # Salidas temporales de campañas de reproducción
 Practicas/persona_2/reproduction/campaign_*.log
